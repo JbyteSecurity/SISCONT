@@ -11,7 +11,7 @@ using Negocios;
 
 namespace Presentacion
 {
-    public partial class frmRegistroCompra : Form
+    public partial class FrmProgramaLibrosElectronicos : Form
     {
         private PlanContable planContable = new PlanContable();
         private Proveedor proveedor = new Proveedor();
@@ -19,7 +19,7 @@ namespace Presentacion
 
         private Compras compras = new Compras();
         private Ventas ventas = new Ventas();
-        public frmRegistroCompra()
+        public FrmProgramaLibrosElectronicos()
         {
             InitializeComponent();
         }
@@ -248,6 +248,11 @@ namespace Presentacion
                         dgvRegistroVentas.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cuenta;
                     break;
             }
+        }
+
+        private void menuItemProveedores_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

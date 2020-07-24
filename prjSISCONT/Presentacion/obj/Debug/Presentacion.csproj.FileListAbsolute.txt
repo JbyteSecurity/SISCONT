@@ -4,7 +4,6 @@ C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\bin\Debug\Prese
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\bin\Debug\Negocios.dll
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\bin\Debug\Negocios.pdb
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.frmRegistroCompra.resources
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
@@ -28,3 +27,6 @@ C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentaci
 C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.frmProveedor.resources
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.frmPrincipal.resources
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmProgramaLibrosElectronicos.resources
