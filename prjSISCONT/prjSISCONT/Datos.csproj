@@ -66,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DaoComprobantePago.cs" />
+    <Compile Include="DaoPlanContable.cs" />
+    <Compile Include="DaoProveedor.cs" />
     <Compile Include="DaoVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DaoCompras.cs" />

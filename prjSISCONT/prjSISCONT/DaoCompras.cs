@@ -11,41 +11,8 @@ namespace Datos
     public class DaoCompras
     {
         private Conexion conexion = new Conexion();
-
-        SqlDataReader leer;
-        DataTable dataTableCDPType = new DataTable();
         SqlCommand comando = new SqlCommand();
-        public DataTable allCdpTypes()
-        {
 
-            comando.Connection = conexion.openConnection();
-            comando.CommandText = "sp_all_tipo_comprobante";
-            comando.CommandType = CommandType.StoredProcedure;
-            leer = comando.ExecuteReader();
-            dataTableCDPType.Load(leer);
-            conexion.closeConnection();
-            return dataTableCDPType;
-
-        }
-
-        SqlDataReader sqlDataReaderProvider;
-        DataTable dataTableProvider = new DataTable();
-        public DataTable showProveedor(string ruc)
-        {
-            comando.Connection = conexion.openConnection();
-            comando.CommandText = "sp_show_name_proveedor";
-            comando.CommandType = CommandType.StoredProcedure;
-
-            comando.Parameters.AddWithValue("@ruc", ruc);
-
-            comando.ExecuteNonQuery();
-
-            sqlDataReaderProvider = comando.ExecuteReader();
-            comando.Parameters.Clear();
-            dataTableProvider.Load(sqlDataReaderProvider);
-            conexion.closeConnection();
-            return dataTableProvider;
-        }
 
         public void insert(
             int mes, string nReg, string fechaEmision, string fechaPago, string cTipo, string cSeire, string cnDocumento,

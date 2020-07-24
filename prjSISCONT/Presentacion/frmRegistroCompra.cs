@@ -13,8 +13,12 @@ namespace Presentacion
 {
     public partial class frmRegistroCompra : Form
     {
-        private Compras bCompras = new Compras();
-        private Ventas bVentas = new Ventas();
+        private PlanContable planContable = new PlanContable();
+        private Proveedor proveedor = new Proveedor();
+        private ComprobantePago comprobantePago = new ComprobantePago();
+
+        private Compras compras = new Compras();
+        private Ventas ventas = new Ventas();
         public frmRegistroCompra()
         {
             InitializeComponent();
@@ -23,12 +27,11 @@ namespace Presentacion
         private void frmRegistroCompra_Load(object sender, EventArgs e)
         {
             llenarComboTipoComprobante();
-            mostrarProveedor();
         }
 
         private void cellContentClickEvent(object sender, DataGridViewCellEventArgs e)
         {
-            mostrarProveedor();
+            //mostrarProveedor();
 
         }
 
@@ -51,7 +54,7 @@ namespace Presentacion
                 {
                     if (!string.IsNullOrEmpty(Convert.ToString(row.Cells["comprasMes"].Value)))
                     {
-                        bCompras.save(
+                        compras.save(
                             Convert.ToInt32(row.Cells["comprasMes"].Value),
                             Convert.ToString(row.Cells["comprasNumeroRegistro"].Value),
                             Convert.ToString(row.Cells["comprasFechaEmision"].Value),
@@ -102,7 +105,7 @@ namespace Presentacion
                 {
                     if (!string.IsNullOrEmpty(Convert.ToString(row.Cells["ventasMes"].Value)))
                     {
-                        bVentas.save(
+                        ventas.save(
                             Convert.ToInt32(row.Cells["ventasMes"].Value),
                             Convert.ToString(row.Cells["ventasNumeroRegistro"].Value),
                             Convert.ToString(row.Cells["ventasFechaEmision"].Value),
@@ -156,15 +159,15 @@ namespace Presentacion
 
         private void llenarComboTipoComprobante()
         {
+            //Compras
             comprasCdpTipo.DisplayMember = "Detail";
             comprasCdpTipo.ValueMember = "numero";
-            
-            comprasCdpTipo.DataSource = bCompras.getAllCpdTypes();
-        }
+            comprasCdpTipo.DataSource = comprobantePago.getAllCpdTypes();
 
-        private void mostrarProveedor()
-        {
-            this.testlabel.Text = Convert.ToString(bCompras.getProvider(this.txtBuscarProveedor.Text));
+            //Ventas
+            ventasCdpTipo.DisplayMember = "Detail";
+            ventasCdpTipo.ValueMember = "numero";
+            ventasCdpTipo.DataSource = comprobantePago.getAllCpdTypes();
         }
 
 
@@ -175,7 +178,7 @@ namespace Presentacion
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
-            mostrarProveedor();
+            //
         }
 
         private void dgvRegistroCompras_KeyDown(object sender, KeyEventArgs e)
@@ -191,16 +194,60 @@ namespace Presentacion
 
         private void dgvRegistroCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            string message = "Simple MessageBox";
-            string title = "Title";
-            string str;
-            if(e.ColumnIndex == 8){
-                str = dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                MessageBox.Show(str, title);
-                dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 2].Value = "Razon Social";
+            
+            switch (e.ColumnIndex)
+            {
+                case 8:
+                    string ruc;
+                    string razonSocial;
+                    ruc = dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    razonSocial = proveedor.getSupplierName(ruc);
+                    if (razonSocial == null)
+                        MessageBox.Show("No se encontro al proveedor con ruc: " + ruc, "Compras .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 2].Value = razonSocial;
+                    break;
+                case 11:
+                case 21:
+                    string codigo;
+                    string cuenta;
+                    codigo = dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    cuenta = planContable.getAcount(codigo);
+                    if (cuenta == null)
+                        MessageBox.Show("No se encontro una cuenta con código: " + codigo, "Compras .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cuenta;
+                    break;
             }
-           
+            
+        }
 
+        private void dgvRegistroVentas_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            switch (e.ColumnIndex)
+            {
+                case 8:
+                    string ruc;
+                    string razonSocial;
+                    ruc = dgvRegistroVentas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    razonSocial = proveedor.getSupplierName(ruc);
+                    if (razonSocial == null)
+                        MessageBox.Show("No se encontro al proveedor con ruc: " + ruc, "Compras .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        dgvRegistroVentas.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = razonSocial;
+                    break;
+                case 10:
+                case 21:
+                    string codigo;
+                    string cuenta;
+                    codigo = dgvRegistroVentas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    cuenta = planContable.getAcount(codigo);
+                    if (cuenta == null)
+                        MessageBox.Show("No se encontro una cuenta con código: " + codigo, "Compras .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        dgvRegistroVentas.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cuenta;
+                    break;
+            }
         }
     }
 }

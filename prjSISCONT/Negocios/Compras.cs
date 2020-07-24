@@ -9,22 +9,8 @@ namespace Negocios
     public class Compras
     {
 
-        private DaoCompras objCompras = new DaoCompras();
-
-        public DataTable getAllCpdTypes()
-        {
-            DataTable dataTableCDPTypes = new DataTable();
-            dataTableCDPTypes = objCompras.allCdpTypes();
-            return dataTableCDPTypes;
-        }
-
-        public DataTable getProvider(string ruc)
-        {
-            DataTable dataTableProvider = new DataTable();
-            dataTableProvider = objCompras.showProveedor(ruc);
-            return dataTableProvider;
-        }
-
+        private DaoCompras daoCompras = new DaoCompras();
+        
         public void save(
             int mes, string nReg, string fechaEmision, string fechaPago, string cTipo, string cSeire, string cnDocumento,
             string pTipo, string pNumero, string pDocumento, string pRazonSocial, string cuenta, string descripcion, double baseImponible,
@@ -33,7 +19,7 @@ namespace Negocios
             double constanciaMonto, string constanciaReferencia
             )
         {
-            objCompras.insert(
+            daoCompras.insert(
                 mes,
                 nReg,
                 fechaEmision,

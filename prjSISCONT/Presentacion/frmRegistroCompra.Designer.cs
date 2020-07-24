@@ -59,15 +59,24 @@
             this.comprasConstanciaFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasConstanciaMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasConstanciaReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabRegistros = new System.Windows.Forms.TabControl();
+            this.tabCompras = new System.Windows.Forms.TabPage();
+            this.tabVentas = new System.Windows.Forms.TabPage();
             this.dgvRegistroVentas = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtBuscarProveedor = new System.Windows.Forms.TextBox();
+            this.btnBuscarProveedor = new System.Windows.Forms.Button();
+            this.testlabel = new System.Windows.Forms.Label();
+            this.btnGuardarVentas = new System.Windows.Forms.Button();
+            this.btnGuardarCompras = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasFechapago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ventasCdpTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventasCdpTipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ventasCdpSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasCdpNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasProveedorTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +94,7 @@
             this.ventasDolares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasIgvRetencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasCuentaDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destinoCuentaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasReferenciaFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasReferenciaTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,19 +106,10 @@
             this.ventasDetraccionSoles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasObservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBuscarProveedor = new System.Windows.Forms.TextBox();
-            this.btnBuscarProveedor = new System.Windows.Forms.Button();
-            this.testlabel = new System.Windows.Forms.Label();
-            this.btnGuardarVentas = new System.Windows.Forms.Button();
-            this.btnGuardarCompras = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabRegistros.SuspendLayout();
+            this.tabCompras.SuspendLayout();
+            this.tabVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -311,40 +312,40 @@
             this.comprasConstanciaReferencia.HeaderText = "Constancia Referencia";
             this.comprasConstanciaReferencia.Name = "comprasConstanciaReferencia";
             // 
-            // tabControl1
+            // tabRegistros
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 120);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1108, 486);
-            this.tabControl1.TabIndex = 1;
+            this.tabRegistros.Controls.Add(this.tabCompras);
+            this.tabRegistros.Controls.Add(this.tabVentas);
+            this.tabRegistros.Location = new System.Drawing.Point(12, 120);
+            this.tabRegistros.Name = "tabRegistros";
+            this.tabRegistros.SelectedIndex = 0;
+            this.tabRegistros.Size = new System.Drawing.Size(1108, 486);
+            this.tabRegistros.TabIndex = 1;
             // 
-            // tabPage1
+            // tabCompras
             // 
-            this.tabPage1.Controls.Add(this.dgvRegistroCompras);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1100, 460);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Compras";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabCompras.Controls.Add(this.dgvRegistroCompras);
+            this.tabCompras.Location = new System.Drawing.Point(4, 22);
+            this.tabCompras.Name = "tabCompras";
+            this.tabCompras.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCompras.Size = new System.Drawing.Size(1100, 460);
+            this.tabCompras.TabIndex = 0;
+            this.tabCompras.Text = "Compras";
+            this.tabCompras.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabVentas
             // 
-            this.tabPage2.Controls.Add(this.dgvRegistroVentas);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1100, 460);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ventas";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabVentas.Controls.Add(this.dgvRegistroVentas);
+            this.tabVentas.Location = new System.Drawing.Point(4, 22);
+            this.tabVentas.Name = "tabVentas";
+            this.tabVentas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabVentas.Size = new System.Drawing.Size(1100, 460);
+            this.tabVentas.TabIndex = 1;
+            this.tabVentas.Text = "Ventas";
+            this.tabVentas.UseVisualStyleBackColor = true;
             // 
             // dgvRegistroVentas
             // 
@@ -372,6 +373,7 @@
             this.ventasDolares,
             this.ventasIgvRetencion,
             this.ventasCuentaDestino,
+            this.destinoCuentaDescripcion,
             this.ventasPago,
             this.ventasReferenciaFecha,
             this.ventasReferenciaTipo,
@@ -388,6 +390,88 @@
             this.dgvRegistroVentas.Name = "dgvRegistroVentas";
             this.dgvRegistroVentas.Size = new System.Drawing.Size(1094, 454);
             this.dgvRegistroVentas.TabIndex = 1;
+            this.dgvRegistroVentas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistroVentas_CellEndEdit);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtBuscarProveedor);
+            this.panel1.Controls.Add(this.btnBuscarProveedor);
+            this.panel1.Controls.Add(this.testlabel);
+            this.panel1.Controls.Add(this.btnGuardarVentas);
+            this.panel1.Controls.Add(this.btnGuardarCompras);
+            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1101, 87);
+            this.panel1.TabIndex = 2;
+            // 
+            // txtBuscarProveedor
+            // 
+            this.txtBuscarProveedor.Location = new System.Drawing.Point(140, 39);
+            this.txtBuscarProveedor.Name = "txtBuscarProveedor";
+            this.txtBuscarProveedor.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarProveedor.TabIndex = 4;
+            // 
+            // btnBuscarProveedor
+            // 
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(59, 36);
+            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarProveedor.TabIndex = 3;
+            this.btnBuscarProveedor.Text = "Buscar";
+            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            // 
+            // testlabel
+            // 
+            this.testlabel.AutoSize = true;
+            this.testlabel.Location = new System.Drawing.Point(255, 42);
+            this.testlabel.Name = "testlabel";
+            this.testlabel.Size = new System.Drawing.Size(35, 13);
+            this.testlabel.TabIndex = 2;
+            this.testlabel.Text = "label1";
+            // 
+            // btnGuardarVentas
+            // 
+            this.btnGuardarVentas.Location = new System.Drawing.Point(857, 25);
+            this.btnGuardarVentas.Name = "btnGuardarVentas";
+            this.btnGuardarVentas.Size = new System.Drawing.Size(119, 23);
+            this.btnGuardarVentas.TabIndex = 1;
+            this.btnGuardarVentas.Text = "Guardar Ventas";
+            this.btnGuardarVentas.UseVisualStyleBackColor = true;
+            this.btnGuardarVentas.Click += new System.EventHandler(this.btnGuardarVentas_Click);
+            // 
+            // btnGuardarCompras
+            // 
+            this.btnGuardarCompras.Location = new System.Drawing.Point(721, 25);
+            this.btnGuardarCompras.Name = "btnGuardarCompras";
+            this.btnGuardarCompras.Size = new System.Drawing.Size(109, 23);
+            this.btnGuardarCompras.TabIndex = 0;
+            this.btnGuardarCompras.Text = "Guardar Compras";
+            this.btnGuardarCompras.UseVisualStyleBackColor = true;
+            this.btnGuardarCompras.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.librosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.toolStripMenuItem1.Text = "Inicio";
+            // 
+            // librosToolStripMenuItem
+            // 
+            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
+            this.librosToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.librosToolStripMenuItem.Text = "Libros";
             // 
             // ventasMes
             // 
@@ -413,6 +497,8 @@
             // 
             this.ventasCdpTipo.HeaderText = "Comprobante Tipo";
             this.ventasCdpTipo.Name = "ventasCdpTipo";
+            this.ventasCdpTipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ventasCdpTipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ventasCdpSerie
             // 
@@ -499,6 +585,11 @@
             this.ventasCuentaDestino.HeaderText = "Cuenta Destino";
             this.ventasCuentaDestino.Name = "ventasCuentaDestino";
             // 
+            // destinoCuentaDescripcion
+            // 
+            this.destinoCuentaDescripcion.HeaderText = "Cuenta Destino Descripción";
+            this.destinoCuentaDescripcion.Name = "destinoCuentaDescripcion";
+            // 
             // ventasPago
             // 
             this.ventasPago.HeaderText = "Pago";
@@ -554,104 +645,23 @@
             this.ventasObservacion.HeaderText = "Observación";
             this.ventasObservacion.Name = "ventasObservacion";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtBuscarProveedor);
-            this.panel1.Controls.Add(this.btnBuscarProveedor);
-            this.panel1.Controls.Add(this.testlabel);
-            this.panel1.Controls.Add(this.btnGuardarVentas);
-            this.panel1.Controls.Add(this.btnGuardarCompras);
-            this.panel1.Location = new System.Drawing.Point(12, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 87);
-            this.panel1.TabIndex = 2;
-            // 
-            // txtBuscarProveedor
-            // 
-            this.txtBuscarProveedor.Location = new System.Drawing.Point(140, 39);
-            this.txtBuscarProveedor.Name = "txtBuscarProveedor";
-            this.txtBuscarProveedor.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscarProveedor.TabIndex = 4;
-            this.txtBuscarProveedor.Text = "20448484816";
-            // 
-            // btnBuscarProveedor
-            // 
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(59, 36);
-            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarProveedor.TabIndex = 3;
-            this.btnBuscarProveedor.Text = "Buscar";
-            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
-            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
-            // 
-            // testlabel
-            // 
-            this.testlabel.AutoSize = true;
-            this.testlabel.Location = new System.Drawing.Point(255, 42);
-            this.testlabel.Name = "testlabel";
-            this.testlabel.Size = new System.Drawing.Size(35, 13);
-            this.testlabel.TabIndex = 2;
-            this.testlabel.Text = "label1";
-            // 
-            // btnGuardarVentas
-            // 
-            this.btnGuardarVentas.Location = new System.Drawing.Point(857, 25);
-            this.btnGuardarVentas.Name = "btnGuardarVentas";
-            this.btnGuardarVentas.Size = new System.Drawing.Size(119, 23);
-            this.btnGuardarVentas.TabIndex = 1;
-            this.btnGuardarVentas.Text = "Guardar Ventas";
-            this.btnGuardarVentas.UseVisualStyleBackColor = true;
-            this.btnGuardarVentas.Click += new System.EventHandler(this.btnGuardarVentas_Click);
-            // 
-            // btnGuardarCompras
-            // 
-            this.btnGuardarCompras.Location = new System.Drawing.Point(721, 25);
-            this.btnGuardarCompras.Name = "btnGuardarCompras";
-            this.btnGuardarCompras.Size = new System.Drawing.Size(109, 23);
-            this.btnGuardarCompras.TabIndex = 0;
-            this.btnGuardarCompras.Text = "Guardar Compras";
-            this.btnGuardarCompras.UseVisualStyleBackColor = true;
-            this.btnGuardarCompras.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.librosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1132, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
-            this.toolStripMenuItem1.Text = "Inicio";
-            // 
-            // librosToolStripMenuItem
-            // 
-            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
-            this.librosToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.librosToolStripMenuItem.Text = "Libros";
-            // 
             // frmRegistroCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 618);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabRegistros);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmRegistroCompra";
             this.Text = "Formato 8.1 .::. Registro de Compra";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmRegistroCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabRegistros.ResumeLayout(false);
+            this.tabCompras.ResumeLayout(false);
+            this.tabVentas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVentas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -665,9 +675,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvRegistroCompras;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabRegistros;
+        private System.Windows.Forms.TabPage tabCompras;
+        private System.Windows.Forms.TabPage tabVentas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
@@ -675,39 +685,6 @@
         private System.Windows.Forms.Button btnGuardarCompras;
         private System.Windows.Forms.DataGridView dgvRegistroVentas;
         private System.Windows.Forms.Button btnGuardarVentas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasMes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasNumeroRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasFechaEmision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasFechapago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCdpTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCdpSerie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCdpNumero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasProveedorTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasProveedorNumero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasProveedorRazonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasValorExportacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasBaseImponible;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasImporteTotalExonerada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasImporteTotalInafecta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasIgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasImporteTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasTipoCambio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasDolares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasIgvRetencion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCuentaDestino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaSerie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaNumero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasConstanciaNumero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasConstanciaFechaPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasDetraccionSoles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ventasObservacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasNumeroRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasFechaEmision;
@@ -741,6 +718,40 @@
         private System.Windows.Forms.Label testlabel;
         private System.Windows.Forms.TextBox txtBuscarProveedor;
         private System.Windows.Forms.Button btnBuscarProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasMes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasNumeroRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasFechaEmision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasFechapago;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ventasCdpTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCdpSerie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCdpNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasProveedorTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasProveedorNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasProveedorRazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasValorExportacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasBaseImponible;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasImporteTotalExonerada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasImporteTotalInafecta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasIgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasImporteTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasTipoCambio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasDolares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasIgvRetencion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCuentaDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinoCuentaDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaSerie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferenciaNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasConstanciaNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasConstanciaFechaPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasDetraccionSoles;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ventasObservacion;
     }
 }
 
