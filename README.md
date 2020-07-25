@@ -9,3 +9,5 @@
 ### Validaciones 
 
 ![alt text](https://i.ibb.co/tXdFmKT/Whats-App-Image-2020-07-25-at-10-05-44-AM-1.jpg)
+
+![alt text](https://i.ibb.co/RNKhZS3/validacion.jpg)
