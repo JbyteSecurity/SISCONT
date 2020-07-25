@@ -16,6 +16,7 @@ namespace Presentacion
         private PlanContable planContable = new PlanContable();
         private Proveedor proveedor = new Proveedor();
         private ComprobantePago comprobantePago = new ComprobantePago();
+        private TipoCambio tipoCambio = new TipoCambio();
 
         private Compras compras = new Compras();
         private Ventas ventas = new Ventas();
@@ -194,12 +195,28 @@ namespace Presentacion
 
         private void dgvRegistroCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            string ruc;
-                string razonSocial;
+            
+            
             switch (e.ColumnIndex)
             {
+                case 2:
+                    string fecha, compra, venta;
+                    DataTable dataTableTipoCambio = new DataTable();
+
+                    fecha = dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasFechaEmision"].Value.ToString();
+
+                    dataTableTipoCambio = tipoCambio.show(fecha);
+                    compra = dataTableTipoCambio.Rows[0]["Compra"].ToString();
+                    venta = dataTableTipoCambio.Rows[0]["Venta"].ToString();
+
+                    if (venta == null)
+                        MessageBox.Show("No se encontro un tipo de cambio para la fecha: " + fecha, "Tipo de Cambio .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasTipoCambio"].Value = venta;
+                    break;
                 case 8:
-                    
+                    string ruc;
+                    string razonSocial;
                     ruc = dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasProveedorNumeroDocumento"].Value.ToString();
                     razonSocial = proveedor.getSupplierName(ruc);
                     if (razonSocial == null)
@@ -226,6 +243,21 @@ namespace Presentacion
         {
             switch (e.ColumnIndex)
             {
+                case 2:
+                    string fecha, compra, venta;
+                    DataTable dataTableTipoCambio = new DataTable();
+
+                    fecha = dgvRegistroVentas.Rows[e.RowIndex].Cells["ventasFechaEmision"].Value.ToString();
+
+                    dataTableTipoCambio = tipoCambio.show(fecha);
+                    compra = dataTableTipoCambio.Rows[0]["Compra"].ToString();
+                    venta = dataTableTipoCambio.Rows[0]["Venta"].ToString();
+
+                    if (venta == null)
+                        MessageBox.Show("No se encontro un tipo de cambio para la fecha: " + fecha, "Tipo de Cambio .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        dgvRegistroVentas.Rows[e.RowIndex].Cells["ventasTipoCambio"].Value = venta;
+                    break;
                 case 8:
                     string ruc;
                     string razonSocial;
