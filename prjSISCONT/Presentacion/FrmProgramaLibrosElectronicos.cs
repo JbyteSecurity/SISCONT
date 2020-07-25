@@ -194,13 +194,13 @@ namespace Presentacion
 
         private void dgvRegistroCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            
+            string ruc;
+                string razonSocial;
             switch (e.ColumnIndex)
             {
                 case 8:
-                    string ruc;
-                    string razonSocial;
-                    ruc = dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    
+                    ruc = dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasProveedorNumeroDocumento"].Value.ToString();
                     razonSocial = proveedor.getSupplierName(ruc);
                     if (razonSocial == null)
                         MessageBox.Show("No se encontro al proveedor con ruc: " + ruc, "Compras .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

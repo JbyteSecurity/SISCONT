@@ -69,6 +69,8 @@
     <Compile Include="DaoComprobantePago.cs" />
     <Compile Include="DaoPlanContable.cs" />
     <Compile Include="DaoProveedor.cs" />
+    <Compile Include="DaoTipoCambio.cs" />
+    <Compile Include="DaoUsuario.cs" />
     <Compile Include="DaoVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DaoCompras.cs" />

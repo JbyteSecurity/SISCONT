@@ -16,7 +16,7 @@ namespace Datos
         public DataTable allCdpTypes()
         {
             SqlDataReader leer;
-            DataTable dataTableCDPType = new DataTable("tblTipoComprobante");
+            DataTable dataTableCDPType = new DataTable();
             comando.Connection = conexion.openConnection();
             comando.CommandText = "sp_all_tipo_comprobante";
             comando.CommandType = CommandType.StoredProcedure;

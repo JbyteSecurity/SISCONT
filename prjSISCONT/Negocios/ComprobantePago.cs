@@ -11,7 +11,7 @@ namespace Negocios
         private DaoComprobantePago daoComprobantePago = new DaoComprobantePago();
         public DataTable getAllCpdTypes()
         {
-            DataTable dataTableCDPTypes = new DataTable("tblTipoComprobante");
+            DataTable dataTableCDPTypes = new DataTable();
             dataTableCDPTypes = daoComprobantePago.allCdpTypes();
             return dataTableCDPTypes;
         }

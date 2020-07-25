@@ -22,6 +22,7 @@ namespace Presentacion
             FrmProveedor frmProveedor = new FrmProveedor();
             frmProveedor.MdiParent = this;
             //frmProveedor.Dock = DockStyle.Fill;
+            //frmProveedor.Text = "SISCONT - " + this.MdiChildren.Length.ToString();
             frmProveedor.Show();
         }
 
@@ -30,7 +31,28 @@ namespace Presentacion
             FrmProgramaLibrosElectronicos frmProgramaLibrosElectronicos = new FrmProgramaLibrosElectronicos();
             frmProgramaLibrosElectronicos.MdiParent = this;
             frmProgramaLibrosElectronicos.Dock = DockStyle.Fill;
+            ///frmProgramaLibrosElectronicos.Text = "SISCONT - " + this.MdiChildren;
             frmProgramaLibrosElectronicos.Show();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void tipoDeCambioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoCambio frmTipoCambio = new FrmTipoCambio();
+            frmTipoCambio.MdiParent = this;
+            frmTipoCambio.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+        }
+
+        
     }
 }

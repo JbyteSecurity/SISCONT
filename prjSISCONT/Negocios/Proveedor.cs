@@ -9,11 +9,11 @@ namespace Negocios
 {
     public class Proveedor
     {
-        private DaoProveedor daoProveedor = new DaoProveedor();
+        private DaoProveedor daoTipoCambio = new DaoProveedor();
         public string getSupplierName(string ruc)
         {
             string razonSocial;
-            razonSocial = daoProveedor.showProveedor(ruc);
+            razonSocial = daoTipoCambio.showProveedor(ruc);
             return razonSocial;
         }
 
@@ -21,26 +21,26 @@ namespace Negocios
         {
             
             DataTable dataTableSuppliers = new DataTable("tblProveedores");
-            dataTableSuppliers = daoProveedor.allSuppliers(); ;
+            dataTableSuppliers = daoTipoCambio.allSuppliers(); ;
             return dataTableSuppliers;
             
         }
 
         public bool save(string ruc, string razonSocial)
         {
-            daoProveedor.insert(ruc, razonSocial);
+            daoTipoCambio.insert(ruc, razonSocial);
             return true;
         }
 
         public bool edit(int id, string ruc, string razonSocial)
         {
-            daoProveedor.update(id, ruc, razonSocial);
+            daoTipoCambio.update(id, ruc, razonSocial);
             return true;
         }
 
         public bool delete(int id)
         {
-            daoProveedor.destroy(id);
+            daoTipoCambio.destroy(id);
             return true;
         }
     }

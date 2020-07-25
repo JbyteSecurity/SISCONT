@@ -145,7 +145,7 @@
             this.Name = "FrmProveedor";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmProveedor";
+            this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.FrmProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).EndInit();
             this.ResumeLayout(false);
