@@ -30,14 +30,54 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvRegistroCompras = new System.Windows.Forms.DataGridView();
+            this.comprasID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasCdpTipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.comprasCdpSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasCdpNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasProveedorTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasProveedorNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasProveedorTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasProveedorRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasBaseImponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasIgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasNoGravada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasImporteTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasDolares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasTipoCambio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasPercepcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasDescripcionDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasCuentaDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasConstanciaNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasConstanciaFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasConstanciaMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasConstanciaReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BancarizacionFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BancarizacionBco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BancarizacionOperacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblRegistroComprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sISCONTDataSet = new Presentacion.SISCONTDataSet();
             this.tabRegistros = new System.Windows.Forms.TabControl();
             this.tabCompras = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnEditarCompras = new System.Windows.Forms.Button();
             this.btnEliminarCompras = new System.Windows.Forms.Button();
             this.tabVentas = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.dgvRegistroVentas = new System.Windows.Forms.DataGridView();
             this.ventasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +116,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarProveedor = new System.Windows.Forms.TextBox();
@@ -84,65 +123,59 @@
             this.testlabel = new System.Windows.Forms.Label();
             this.btnGuardarVentas = new System.Windows.Forms.Button();
             this.btnGuardarCompras = new System.Windows.Forms.Button();
-            this.sISCONTDataSet = new Presentacion.SISCONTDataSet();
-            this.tblRegistroComprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblRegistroComprasTableAdapter = new Presentacion.SISCONTDataSetTableAdapters.tblRegistroComprasTableAdapter();
-            //this.sISCONTDataSet1 = new Presentacion.SISCONTDataSet1();
             this.tblTipoComprobanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.tblTipoComprobanteTableAdapter = new Presentacion.SISCONTDataSet1TableAdapters.tblTipoComprobanteTableAdapter();
-            this.comprasID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasCdpTipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.comprasCdpSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasCdpNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasProveedorTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasProveedorNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasProveedorTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasProveedorRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasBaseImponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasIgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasNoGravada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasImporteTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasDolares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasTipoCambio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasPercepcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasDescripcionDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasCuentaDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasConstanciaNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasConstanciaFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasConstanciaMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprasConstanciaReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BancarizacionFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BancarizacionBco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BancarizacionOperacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.idLibroComprasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEmisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cSerieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cNDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pTipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pNumeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pNombreRazonSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baseImponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iGVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noGravadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuentosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importeTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoCambioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percepcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDestinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuentaDestinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pgoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.constanciaNumeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.constanciaFechaPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.constanciaMontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.constanciaReferenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bancarizacionFechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bancarizacionBcoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bancarizacionOperacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaModificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet)).BeginInit();
             this.tabRegistros.SuspendLayout();
             this.tabCompras.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabVentas.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTipoComprobanteBindingSource)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvRegistroCompras
@@ -183,7 +216,44 @@
             this.comprasConstanciaReferencia,
             this.BancarizacionFecha,
             this.BancarizacionBco,
-            this.BancarizacionOperacion});
+            this.BancarizacionOperacion,
+            this.idLibroComprasDataGridViewTextBoxColumn,
+            this.mesDataGridViewTextBoxColumn,
+            this.nRegDataGridViewTextBoxColumn,
+            this.fechaEmisionDataGridViewTextBoxColumn,
+            this.fechaPagoDataGridViewTextBoxColumn,
+            this.cTipoDataGridViewTextBoxColumn,
+            this.cSerieDataGridViewTextBoxColumn,
+            this.cNDocumentoDataGridViewTextBoxColumn,
+            this.pTipoDataGridViewTextBoxColumn,
+            this.pNumeroDataGridViewTextBoxColumn,
+            this.pDocumentoDataGridViewTextBoxColumn,
+            this.pNombreRazonSocialDataGridViewTextBoxColumn,
+            this.cuentaDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.baseImponibleDataGridViewTextBoxColumn,
+            this.iGVDataGridViewTextBoxColumn,
+            this.noGravadaDataGridViewTextBoxColumn,
+            this.descuentosDataGridViewTextBoxColumn,
+            this.importeTotalDataGridViewTextBoxColumn,
+            this.dolaresDataGridViewTextBoxColumn,
+            this.tipoCambioDataGridViewTextBoxColumn,
+            this.percepcionDataGridViewTextBoxColumn,
+            this.destinoDataGridViewTextBoxColumn,
+            this.descripcionDestinoDataGridViewTextBoxColumn,
+            this.cuentaDestinoDataGridViewTextBoxColumn,
+            this.pgoDataGridViewTextBoxColumn,
+            this.codigoDataGridViewTextBoxColumn,
+            this.constanciaNumeroDataGridViewTextBoxColumn,
+            this.constanciaFechaPagoDataGridViewTextBoxColumn,
+            this.constanciaMontoDataGridViewTextBoxColumn,
+            this.constanciaReferenciaDataGridViewTextBoxColumn,
+            this.bancarizacionFechaDataGridViewTextBoxColumn,
+            this.bancarizacionBcoDataGridViewTextBoxColumn,
+            this.bancarizacionOperacionDataGridViewTextBoxColumn,
+            this.usuarioDataGridViewTextBoxColumn,
+            this.fechaRegistroDataGridViewTextBoxColumn,
+            this.fechaModificacionDataGridViewTextBoxColumn});
             this.dgvRegistroCompras.DataSource = this.tblRegistroComprasBindingSource;
             this.dgvRegistroCompras.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRegistroCompras.Location = new System.Drawing.Point(0, 0);
@@ -196,6 +266,231 @@
             this.dgvRegistroCompras.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellValueChanged);
             this.dgvRegistroCompras.TabIndexChanged += new System.EventHandler(this.tabIndexChangedEvent);
             this.dgvRegistroCompras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvRegistroCompras_KeyDown);
+            // 
+            // comprasID
+            // 
+            this.comprasID.DataPropertyName = "idLibroCompras";
+            this.comprasID.HeaderText = "#";
+            this.comprasID.Name = "comprasID";
+            this.comprasID.ReadOnly = true;
+            this.comprasID.Width = 40;
+            // 
+            // comprasMes
+            // 
+            this.comprasMes.DataPropertyName = "Mes";
+            this.comprasMes.HeaderText = "Mes";
+            this.comprasMes.Name = "comprasMes";
+            this.comprasMes.Width = 40;
+            // 
+            // comprasNumeroRegistro
+            // 
+            this.comprasNumeroRegistro.DataPropertyName = "NReg";
+            this.comprasNumeroRegistro.HeaderText = "N° Registro";
+            this.comprasNumeroRegistro.Name = "comprasNumeroRegistro";
+            // 
+            // comprasFechaEmision
+            // 
+            this.comprasFechaEmision.DataPropertyName = "FechaEmision";
+            this.comprasFechaEmision.HeaderText = "Fecha de Emisión";
+            this.comprasFechaEmision.Name = "comprasFechaEmision";
+            this.comprasFechaEmision.Width = 80;
+            // 
+            // comprasFechaPago
+            // 
+            this.comprasFechaPago.DataPropertyName = "FechaPago";
+            this.comprasFechaPago.HeaderText = "Fecha de Pago";
+            this.comprasFechaPago.Name = "comprasFechaPago";
+            this.comprasFechaPago.Width = 80;
+            // 
+            // comprasCdpTipo
+            // 
+            this.comprasCdpTipo.DataPropertyName = "CTipo";
+            this.comprasCdpTipo.HeaderText = "Comprobante Tipo";
+            this.comprasCdpTipo.Name = "comprasCdpTipo";
+            this.comprasCdpTipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.comprasCdpTipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.comprasCdpTipo.Width = 120;
+            // 
+            // comprasCdpSerie
+            // 
+            this.comprasCdpSerie.DataPropertyName = "CSerie";
+            this.comprasCdpSerie.HeaderText = "Comprobante Serie";
+            this.comprasCdpSerie.Name = "comprasCdpSerie";
+            // 
+            // comprasCdpNumeroDocumento
+            // 
+            this.comprasCdpNumeroDocumento.DataPropertyName = "CNDocumento";
+            this.comprasCdpNumeroDocumento.HeaderText = "Comprobante Número Documento";
+            this.comprasCdpNumeroDocumento.Name = "comprasCdpNumeroDocumento";
+            // 
+            // comprasProveedorTipo
+            // 
+            this.comprasProveedorTipo.DataPropertyName = "PTipo";
+            this.comprasProveedorTipo.HeaderText = "Proveedor Tipo";
+            this.comprasProveedorTipo.Name = "comprasProveedorTipo";
+            // 
+            // comprasProveedorNumeroDocumento
+            // 
+            this.comprasProveedorNumeroDocumento.DataPropertyName = "PNumero";
+            this.comprasProveedorNumeroDocumento.HeaderText = "Proveedor Numero Documento";
+            this.comprasProveedorNumeroDocumento.Name = "comprasProveedorNumeroDocumento";
+            // 
+            // comprasProveedorTipoDocumento
+            // 
+            this.comprasProveedorTipoDocumento.DataPropertyName = "PDocumento";
+            this.comprasProveedorTipoDocumento.HeaderText = "Proveedor Tipo Documento";
+            this.comprasProveedorTipoDocumento.Name = "comprasProveedorTipoDocumento";
+            // 
+            // comprasProveedorRazonSocial
+            // 
+            this.comprasProveedorRazonSocial.DataPropertyName = "PNombreRazonSocial";
+            this.comprasProveedorRazonSocial.HeaderText = "Proveedor Razón Social";
+            this.comprasProveedorRazonSocial.Name = "comprasProveedorRazonSocial";
+            this.comprasProveedorRazonSocial.Width = 200;
+            // 
+            // comprasCuenta
+            // 
+            this.comprasCuenta.DataPropertyName = "Cuenta";
+            this.comprasCuenta.HeaderText = "Cuenta";
+            this.comprasCuenta.Name = "comprasCuenta";
+            // 
+            // comprasDescripcion
+            // 
+            this.comprasDescripcion.DataPropertyName = "Descripcion";
+            this.comprasDescripcion.HeaderText = "Descripción";
+            this.comprasDescripcion.Name = "comprasDescripcion";
+            // 
+            // comprasBaseImponible
+            // 
+            this.comprasBaseImponible.DataPropertyName = "BaseImponible";
+            this.comprasBaseImponible.HeaderText = "Base Imponible";
+            this.comprasBaseImponible.Name = "comprasBaseImponible";
+            // 
+            // comprasIgv
+            // 
+            this.comprasIgv.DataPropertyName = "IGV";
+            this.comprasIgv.HeaderText = "IGV";
+            this.comprasIgv.Name = "comprasIgv";
+            // 
+            // comprasNoGravada
+            // 
+            this.comprasNoGravada.DataPropertyName = "NoGravada";
+            this.comprasNoGravada.HeaderText = "No Gravada";
+            this.comprasNoGravada.Name = "comprasNoGravada";
+            // 
+            // comprasDescuento
+            // 
+            this.comprasDescuento.DataPropertyName = "Descuentos";
+            this.comprasDescuento.HeaderText = "Descuento";
+            this.comprasDescuento.Name = "comprasDescuento";
+            // 
+            // comprasImporteTotal
+            // 
+            this.comprasImporteTotal.DataPropertyName = "ImporteTotal";
+            this.comprasImporteTotal.HeaderText = "Importe Total";
+            this.comprasImporteTotal.Name = "comprasImporteTotal";
+            // 
+            // comprasDolares
+            // 
+            this.comprasDolares.DataPropertyName = "Dolares";
+            this.comprasDolares.HeaderText = "Dolares";
+            this.comprasDolares.Name = "comprasDolares";
+            // 
+            // comprasTipoCambio
+            // 
+            this.comprasTipoCambio.DataPropertyName = "TipoCambio";
+            this.comprasTipoCambio.HeaderText = "Tipo de Cambio";
+            this.comprasTipoCambio.Name = "comprasTipoCambio";
+            // 
+            // comprasPercepcion
+            // 
+            this.comprasPercepcion.DataPropertyName = "Percepcion";
+            this.comprasPercepcion.HeaderText = "Percepción";
+            this.comprasPercepcion.Name = "comprasPercepcion";
+            // 
+            // comprasDestino
+            // 
+            this.comprasDestino.DataPropertyName = "Destino";
+            this.comprasDestino.HeaderText = "Destino";
+            this.comprasDestino.Name = "comprasDestino";
+            // 
+            // comprasDescripcionDestino
+            // 
+            this.comprasDescripcionDestino.DataPropertyName = "DescripcionDestino";
+            this.comprasDescripcionDestino.HeaderText = "Descripción Destino";
+            this.comprasDescripcionDestino.Name = "comprasDescripcionDestino";
+            // 
+            // comprasCuentaDestino
+            // 
+            this.comprasCuentaDestino.DataPropertyName = "CuentaDestino";
+            this.comprasCuentaDestino.HeaderText = "Cuenta Destino";
+            this.comprasCuentaDestino.Name = "comprasCuentaDestino";
+            // 
+            // comprasPago
+            // 
+            this.comprasPago.DataPropertyName = "Pgo";
+            this.comprasPago.HeaderText = "Pago";
+            this.comprasPago.Name = "comprasPago";
+            // 
+            // comprasCodigo
+            // 
+            this.comprasCodigo.DataPropertyName = "Codigo";
+            this.comprasCodigo.HeaderText = "Código";
+            this.comprasCodigo.Name = "comprasCodigo";
+            // 
+            // comprasConstanciaNumero
+            // 
+            this.comprasConstanciaNumero.DataPropertyName = "ConstanciaNumero";
+            this.comprasConstanciaNumero.HeaderText = "Constancia Número";
+            this.comprasConstanciaNumero.Name = "comprasConstanciaNumero";
+            // 
+            // comprasConstanciaFechaPago
+            // 
+            this.comprasConstanciaFechaPago.DataPropertyName = "ConstanciaFechaPago";
+            this.comprasConstanciaFechaPago.HeaderText = "Constancia de Fecha de Pago";
+            this.comprasConstanciaFechaPago.Name = "comprasConstanciaFechaPago";
+            this.comprasConstanciaFechaPago.Width = 80;
+            // 
+            // comprasConstanciaMonto
+            // 
+            this.comprasConstanciaMonto.DataPropertyName = "ConstanciaMonto";
+            this.comprasConstanciaMonto.HeaderText = "Constancia Monto";
+            this.comprasConstanciaMonto.Name = "comprasConstanciaMonto";
+            // 
+            // comprasConstanciaReferencia
+            // 
+            this.comprasConstanciaReferencia.DataPropertyName = "ConstanciaReferencia";
+            this.comprasConstanciaReferencia.HeaderText = "Constancia Referencia";
+            this.comprasConstanciaReferencia.Name = "comprasConstanciaReferencia";
+            // 
+            // BancarizacionFecha
+            // 
+            this.BancarizacionFecha.DataPropertyName = "BancarizacionFecha";
+            this.BancarizacionFecha.HeaderText = "Bancarizacion Fecha";
+            this.BancarizacionFecha.Name = "BancarizacionFecha";
+            this.BancarizacionFecha.Width = 80;
+            // 
+            // BancarizacionBco
+            // 
+            this.BancarizacionBco.DataPropertyName = "BancarizacionBco";
+            this.BancarizacionBco.HeaderText = "Bancarizacion Bco";
+            this.BancarizacionBco.Name = "BancarizacionBco";
+            // 
+            // BancarizacionOperacion
+            // 
+            this.BancarizacionOperacion.DataPropertyName = "BancarizacionOperacion";
+            this.BancarizacionOperacion.HeaderText = "Bancarizacion Operacion";
+            this.BancarizacionOperacion.Name = "BancarizacionOperacion";
+            // 
+            // tblRegistroComprasBindingSource
+            // 
+            this.tblRegistroComprasBindingSource.DataMember = "tblRegistroCompras";
+            this.tblRegistroComprasBindingSource.DataSource = this.sISCONTDataSet;
+            // 
+            // sISCONTDataSet
+            // 
+            this.sISCONTDataSet.DataSetName = "SISCONTDataSet";
+            this.sISCONTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabRegistros
             // 
@@ -238,7 +533,6 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.btnEditarCompras);
             this.panel3.Controls.Add(this.btnEliminarCompras);
             this.panel3.Location = new System.Drawing.Point(6, 458);
             this.panel3.Name = "panel3";
@@ -247,32 +541,27 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(15, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(109, 23);
             this.button3.TabIndex = 0;
             this.button3.Text = "Guardar Compras";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEditarCompras
-            // 
-            this.btnEditarCompras.Location = new System.Drawing.Point(555, 17);
-            this.btnEditarCompras.Name = "btnEditarCompras";
-            this.btnEditarCompras.Size = new System.Drawing.Size(128, 23);
-            this.btnEditarCompras.TabIndex = 1;
-            this.btnEditarCompras.Text = "Editar Ventas";
-            this.btnEditarCompras.UseVisualStyleBackColor = true;
-            this.btnEditarCompras.Click += new System.EventHandler(this.btnEditarCompras_Click);
             // 
             // btnEliminarCompras
             // 
-            this.btnEliminarCompras.Location = new System.Drawing.Point(384, 17);
+            this.btnEliminarCompras.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCompras.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEliminarCompras.Location = new System.Drawing.Point(142, 17);
             this.btnEliminarCompras.Name = "btnEliminarCompras";
             this.btnEliminarCompras.Size = new System.Drawing.Size(128, 23);
             this.btnEliminarCompras.TabIndex = 0;
             this.btnEliminarCompras.Text = "Eliminar Compras";
-            this.btnEliminarCompras.UseVisualStyleBackColor = true;
+            this.btnEliminarCompras.UseVisualStyleBackColor = false;
             this.btnEliminarCompras.Click += new System.EventHandler(this.btnEliminarCompras_Click);
             // 
             // tabVentas
@@ -286,6 +575,54 @@
             this.tabVentas.TabIndex = 1;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Location = new System.Drawing.Point(6, 458);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1088, 54);
+            this.panel6.TabIndex = 4;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(555, 17);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(128, 23);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Editar Ventas";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(15, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Guardar Ventas";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnGuardarVentas_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(384, 17);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(128, 23);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Eliminar Compras";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgvRegistroVentas);
+            this.panel5.Location = new System.Drawing.Point(6, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1088, 446);
+            this.panel5.TabIndex = 2;
             // 
             // dgvRegistroVentas
             // 
@@ -534,16 +871,6 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(15, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Guardar Ventas";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnGuardarVentas_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(59, 36);
@@ -609,286 +936,232 @@
             this.btnGuardarCompras.UseVisualStyleBackColor = true;
             this.btnGuardarCompras.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // sISCONTDataSet
-            // 
-            this.sISCONTDataSet.DataSetName = "SISCONTDataSet";
-            this.sISCONTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblRegistroComprasBindingSource
-            // 
-            this.tblRegistroComprasBindingSource.DataMember = "tblRegistroCompras";
-            this.tblRegistroComprasBindingSource.DataSource = this.sISCONTDataSet;
-            // 
             // tblRegistroComprasTableAdapter
             // 
             this.tblRegistroComprasTableAdapter.ClearBeforeFill = true;
             // 
-            // sISCONTDataSet1
+            // idLibroComprasDataGridViewTextBoxColumn
             // 
-            //this.sISCONTDataSet1.DataSetName = "SISCONTDataSet1";
-            //this.sISCONTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.idLibroComprasDataGridViewTextBoxColumn.DataPropertyName = "idLibroCompras";
+            this.idLibroComprasDataGridViewTextBoxColumn.HeaderText = "idLibroCompras";
+            this.idLibroComprasDataGridViewTextBoxColumn.Name = "idLibroComprasDataGridViewTextBoxColumn";
+            this.idLibroComprasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tblTipoComprobanteBindingSource
+            // mesDataGridViewTextBoxColumn
             // 
-            //this.tblTipoComprobanteBindingSource.DataMember = "tblTipoComprobante";
-            //this.tblTipoComprobanteBindingSource.DataSource = this.sISCONTDataSet1;
+            this.mesDataGridViewTextBoxColumn.DataPropertyName = "Mes";
+            this.mesDataGridViewTextBoxColumn.HeaderText = "Mes";
+            this.mesDataGridViewTextBoxColumn.Name = "mesDataGridViewTextBoxColumn";
             // 
-            // tblTipoComprobanteTableAdapter
+            // nRegDataGridViewTextBoxColumn
             // 
-            //this.tblTipoComprobanteTableAdapter.ClearBeforeFill = true;
+            this.nRegDataGridViewTextBoxColumn.DataPropertyName = "NReg";
+            this.nRegDataGridViewTextBoxColumn.HeaderText = "NReg";
+            this.nRegDataGridViewTextBoxColumn.Name = "nRegDataGridViewTextBoxColumn";
             // 
-            // comprasID
+            // fechaEmisionDataGridViewTextBoxColumn
             // 
-            this.comprasID.DataPropertyName = "idLibroCompras";
-            this.comprasID.HeaderText = "#";
-            this.comprasID.Name = "comprasID";
-            this.comprasID.ReadOnly = true;
-            this.comprasID.Width = 40;
+            this.fechaEmisionDataGridViewTextBoxColumn.DataPropertyName = "FechaEmision";
+            this.fechaEmisionDataGridViewTextBoxColumn.HeaderText = "FechaEmision";
+            this.fechaEmisionDataGridViewTextBoxColumn.Name = "fechaEmisionDataGridViewTextBoxColumn";
             // 
-            // comprasMes
+            // fechaPagoDataGridViewTextBoxColumn
             // 
-            this.comprasMes.DataPropertyName = "Mes";
-            this.comprasMes.HeaderText = "Mes";
-            this.comprasMes.Name = "comprasMes";
-            this.comprasMes.Width = 40;
+            this.fechaPagoDataGridViewTextBoxColumn.DataPropertyName = "FechaPago";
+            this.fechaPagoDataGridViewTextBoxColumn.HeaderText = "FechaPago";
+            this.fechaPagoDataGridViewTextBoxColumn.Name = "fechaPagoDataGridViewTextBoxColumn";
             // 
-            // comprasNumeroRegistro
+            // cTipoDataGridViewTextBoxColumn
             // 
-            this.comprasNumeroRegistro.DataPropertyName = "NReg";
-            this.comprasNumeroRegistro.HeaderText = "N° Registro";
-            this.comprasNumeroRegistro.Name = "comprasNumeroRegistro";
+            this.cTipoDataGridViewTextBoxColumn.DataPropertyName = "CTipo";
+            this.cTipoDataGridViewTextBoxColumn.HeaderText = "CTipo";
+            this.cTipoDataGridViewTextBoxColumn.Name = "cTipoDataGridViewTextBoxColumn";
             // 
-            // comprasFechaEmision
+            // cSerieDataGridViewTextBoxColumn
             // 
-            this.comprasFechaEmision.DataPropertyName = "FechaEmision";
-            this.comprasFechaEmision.HeaderText = "Fecha de Emisión";
-            this.comprasFechaEmision.Name = "comprasFechaEmision";
-            this.comprasFechaEmision.Width = 80;
+            this.cSerieDataGridViewTextBoxColumn.DataPropertyName = "CSerie";
+            this.cSerieDataGridViewTextBoxColumn.HeaderText = "CSerie";
+            this.cSerieDataGridViewTextBoxColumn.Name = "cSerieDataGridViewTextBoxColumn";
             // 
-            // comprasFechaPago
+            // cNDocumentoDataGridViewTextBoxColumn
             // 
-            this.comprasFechaPago.DataPropertyName = "FechaPago";
-            this.comprasFechaPago.HeaderText = "Fecha de Pago";
-            this.comprasFechaPago.Name = "comprasFechaPago";
-            this.comprasFechaPago.Width = 80;
+            this.cNDocumentoDataGridViewTextBoxColumn.DataPropertyName = "CNDocumento";
+            this.cNDocumentoDataGridViewTextBoxColumn.HeaderText = "CNDocumento";
+            this.cNDocumentoDataGridViewTextBoxColumn.Name = "cNDocumentoDataGridViewTextBoxColumn";
             // 
-            // comprasCdpTipo
+            // pTipoDataGridViewTextBoxColumn
             // 
-            this.comprasCdpTipo.DataPropertyName = "CTipo";
-            this.comprasCdpTipo.HeaderText = "Comprobante Tipo";
-            this.comprasCdpTipo.Name = "comprasCdpTipo";
-            this.comprasCdpTipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.comprasCdpTipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.comprasCdpTipo.Width = 120;
+            this.pTipoDataGridViewTextBoxColumn.DataPropertyName = "PTipo";
+            this.pTipoDataGridViewTextBoxColumn.HeaderText = "PTipo";
+            this.pTipoDataGridViewTextBoxColumn.Name = "pTipoDataGridViewTextBoxColumn";
             // 
-            // comprasCdpSerie
+            // pNumeroDataGridViewTextBoxColumn
             // 
-            this.comprasCdpSerie.DataPropertyName = "CSerie";
-            this.comprasCdpSerie.HeaderText = "Comprobante Serie";
-            this.comprasCdpSerie.Name = "comprasCdpSerie";
+            this.pNumeroDataGridViewTextBoxColumn.DataPropertyName = "PNumero";
+            this.pNumeroDataGridViewTextBoxColumn.HeaderText = "PNumero";
+            this.pNumeroDataGridViewTextBoxColumn.Name = "pNumeroDataGridViewTextBoxColumn";
             // 
-            // comprasCdpNumeroDocumento
+            // pDocumentoDataGridViewTextBoxColumn
             // 
-            this.comprasCdpNumeroDocumento.DataPropertyName = "CNDocumento";
-            this.comprasCdpNumeroDocumento.HeaderText = "Comprobante Número Documento";
-            this.comprasCdpNumeroDocumento.Name = "comprasCdpNumeroDocumento";
+            this.pDocumentoDataGridViewTextBoxColumn.DataPropertyName = "PDocumento";
+            this.pDocumentoDataGridViewTextBoxColumn.HeaderText = "PDocumento";
+            this.pDocumentoDataGridViewTextBoxColumn.Name = "pDocumentoDataGridViewTextBoxColumn";
             // 
-            // comprasProveedorTipo
+            // pNombreRazonSocialDataGridViewTextBoxColumn
             // 
-            this.comprasProveedorTipo.DataPropertyName = "PTipo";
-            this.comprasProveedorTipo.HeaderText = "Proveedor Tipo";
-            this.comprasProveedorTipo.Name = "comprasProveedorTipo";
+            this.pNombreRazonSocialDataGridViewTextBoxColumn.DataPropertyName = "PNombreRazonSocial";
+            this.pNombreRazonSocialDataGridViewTextBoxColumn.HeaderText = "PNombreRazonSocial";
+            this.pNombreRazonSocialDataGridViewTextBoxColumn.Name = "pNombreRazonSocialDataGridViewTextBoxColumn";
             // 
-            // comprasProveedorNumeroDocumento
+            // cuentaDataGridViewTextBoxColumn
             // 
-            this.comprasProveedorNumeroDocumento.DataPropertyName = "PNumero";
-            this.comprasProveedorNumeroDocumento.HeaderText = "Proveedor Numero Documento";
-            this.comprasProveedorNumeroDocumento.Name = "comprasProveedorNumeroDocumento";
+            this.cuentaDataGridViewTextBoxColumn.DataPropertyName = "Cuenta";
+            this.cuentaDataGridViewTextBoxColumn.HeaderText = "Cuenta";
+            this.cuentaDataGridViewTextBoxColumn.Name = "cuentaDataGridViewTextBoxColumn";
             // 
-            // comprasProveedorTipoDocumento
+            // descripcionDataGridViewTextBoxColumn
             // 
-            this.comprasProveedorTipoDocumento.DataPropertyName = "PDocumento";
-            this.comprasProveedorTipoDocumento.HeaderText = "Proveedor Tipo Documento";
-            this.comprasProveedorTipoDocumento.Name = "comprasProveedorTipoDocumento";
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
             // 
-            // comprasProveedorRazonSocial
+            // baseImponibleDataGridViewTextBoxColumn
             // 
-            this.comprasProveedorRazonSocial.DataPropertyName = "PNombreRazonSocial";
-            this.comprasProveedorRazonSocial.HeaderText = "Proveedor Razón Social";
-            this.comprasProveedorRazonSocial.Name = "comprasProveedorRazonSocial";
-            this.comprasProveedorRazonSocial.Width = 200;
+            this.baseImponibleDataGridViewTextBoxColumn.DataPropertyName = "BaseImponible";
+            this.baseImponibleDataGridViewTextBoxColumn.HeaderText = "BaseImponible";
+            this.baseImponibleDataGridViewTextBoxColumn.Name = "baseImponibleDataGridViewTextBoxColumn";
             // 
-            // comprasCuenta
+            // iGVDataGridViewTextBoxColumn
             // 
-            this.comprasCuenta.DataPropertyName = "Cuenta";
-            this.comprasCuenta.HeaderText = "Cuenta";
-            this.comprasCuenta.Name = "comprasCuenta";
+            this.iGVDataGridViewTextBoxColumn.DataPropertyName = "IGV";
+            this.iGVDataGridViewTextBoxColumn.HeaderText = "IGV";
+            this.iGVDataGridViewTextBoxColumn.Name = "iGVDataGridViewTextBoxColumn";
             // 
-            // comprasDescripcion
+            // noGravadaDataGridViewTextBoxColumn
             // 
-            this.comprasDescripcion.DataPropertyName = "Descripcion";
-            this.comprasDescripcion.HeaderText = "Descripción";
-            this.comprasDescripcion.Name = "comprasDescripcion";
+            this.noGravadaDataGridViewTextBoxColumn.DataPropertyName = "NoGravada";
+            this.noGravadaDataGridViewTextBoxColumn.HeaderText = "NoGravada";
+            this.noGravadaDataGridViewTextBoxColumn.Name = "noGravadaDataGridViewTextBoxColumn";
             // 
-            // comprasBaseImponible
+            // descuentosDataGridViewTextBoxColumn
             // 
-            this.comprasBaseImponible.DataPropertyName = "BaseImponible";
-            this.comprasBaseImponible.HeaderText = "Base Imponible";
-            this.comprasBaseImponible.Name = "comprasBaseImponible";
+            this.descuentosDataGridViewTextBoxColumn.DataPropertyName = "Descuentos";
+            this.descuentosDataGridViewTextBoxColumn.HeaderText = "Descuentos";
+            this.descuentosDataGridViewTextBoxColumn.Name = "descuentosDataGridViewTextBoxColumn";
             // 
-            // comprasIgv
+            // importeTotalDataGridViewTextBoxColumn
             // 
-            this.comprasIgv.DataPropertyName = "IGV";
-            this.comprasIgv.HeaderText = "IGV";
-            this.comprasIgv.Name = "comprasIgv";
+            this.importeTotalDataGridViewTextBoxColumn.DataPropertyName = "ImporteTotal";
+            this.importeTotalDataGridViewTextBoxColumn.HeaderText = "ImporteTotal";
+            this.importeTotalDataGridViewTextBoxColumn.Name = "importeTotalDataGridViewTextBoxColumn";
             // 
-            // comprasNoGravada
+            // dolaresDataGridViewTextBoxColumn
             // 
-            this.comprasNoGravada.DataPropertyName = "NoGravada";
-            this.comprasNoGravada.HeaderText = "No Gravada";
-            this.comprasNoGravada.Name = "comprasNoGravada";
+            this.dolaresDataGridViewTextBoxColumn.DataPropertyName = "Dolares";
+            this.dolaresDataGridViewTextBoxColumn.HeaderText = "Dolares";
+            this.dolaresDataGridViewTextBoxColumn.Name = "dolaresDataGridViewTextBoxColumn";
             // 
-            // comprasDescuento
+            // tipoCambioDataGridViewTextBoxColumn
             // 
-            this.comprasDescuento.DataPropertyName = "Descuentos";
-            this.comprasDescuento.HeaderText = "Descuento";
-            this.comprasDescuento.Name = "comprasDescuento";
+            this.tipoCambioDataGridViewTextBoxColumn.DataPropertyName = "TipoCambio";
+            this.tipoCambioDataGridViewTextBoxColumn.HeaderText = "TipoCambio";
+            this.tipoCambioDataGridViewTextBoxColumn.Name = "tipoCambioDataGridViewTextBoxColumn";
             // 
-            // comprasImporteTotal
+            // percepcionDataGridViewTextBoxColumn
             // 
-            this.comprasImporteTotal.DataPropertyName = "ImporteTotal";
-            this.comprasImporteTotal.HeaderText = "Importe Total";
-            this.comprasImporteTotal.Name = "comprasImporteTotal";
+            this.percepcionDataGridViewTextBoxColumn.DataPropertyName = "Percepcion";
+            this.percepcionDataGridViewTextBoxColumn.HeaderText = "Percepcion";
+            this.percepcionDataGridViewTextBoxColumn.Name = "percepcionDataGridViewTextBoxColumn";
             // 
-            // comprasDolares
+            // destinoDataGridViewTextBoxColumn
             // 
-            this.comprasDolares.DataPropertyName = "Dolares";
-            this.comprasDolares.HeaderText = "Dolares";
-            this.comprasDolares.Name = "comprasDolares";
+            this.destinoDataGridViewTextBoxColumn.DataPropertyName = "Destino";
+            this.destinoDataGridViewTextBoxColumn.HeaderText = "Destino";
+            this.destinoDataGridViewTextBoxColumn.Name = "destinoDataGridViewTextBoxColumn";
             // 
-            // comprasTipoCambio
+            // descripcionDestinoDataGridViewTextBoxColumn
             // 
-            this.comprasTipoCambio.DataPropertyName = "TipoCambio";
-            this.comprasTipoCambio.HeaderText = "Tipo de Cambio";
-            this.comprasTipoCambio.Name = "comprasTipoCambio";
+            this.descripcionDestinoDataGridViewTextBoxColumn.DataPropertyName = "DescripcionDestino";
+            this.descripcionDestinoDataGridViewTextBoxColumn.HeaderText = "DescripcionDestino";
+            this.descripcionDestinoDataGridViewTextBoxColumn.Name = "descripcionDestinoDataGridViewTextBoxColumn";
             // 
-            // comprasPercepcion
+            // cuentaDestinoDataGridViewTextBoxColumn
             // 
-            this.comprasPercepcion.DataPropertyName = "Percepcion";
-            this.comprasPercepcion.HeaderText = "Percepción";
-            this.comprasPercepcion.Name = "comprasPercepcion";
+            this.cuentaDestinoDataGridViewTextBoxColumn.DataPropertyName = "CuentaDestino";
+            this.cuentaDestinoDataGridViewTextBoxColumn.HeaderText = "CuentaDestino";
+            this.cuentaDestinoDataGridViewTextBoxColumn.Name = "cuentaDestinoDataGridViewTextBoxColumn";
             // 
-            // comprasDestino
+            // pgoDataGridViewTextBoxColumn
             // 
-            this.comprasDestino.DataPropertyName = "Destino";
-            this.comprasDestino.HeaderText = "Destino";
-            this.comprasDestino.Name = "comprasDestino";
+            this.pgoDataGridViewTextBoxColumn.DataPropertyName = "Pgo";
+            this.pgoDataGridViewTextBoxColumn.HeaderText = "Pgo";
+            this.pgoDataGridViewTextBoxColumn.Name = "pgoDataGridViewTextBoxColumn";
             // 
-            // comprasDescripcionDestino
+            // codigoDataGridViewTextBoxColumn
             // 
-            this.comprasDescripcionDestino.DataPropertyName = "DescripcionDestino";
-            this.comprasDescripcionDestino.HeaderText = "Descripción Destino";
-            this.comprasDescripcionDestino.Name = "comprasDescripcionDestino";
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
             // 
-            // comprasCuentaDestino
+            // constanciaNumeroDataGridViewTextBoxColumn
             // 
-            this.comprasCuentaDestino.DataPropertyName = "CuentaDestino";
-            this.comprasCuentaDestino.HeaderText = "Cuenta Destino";
-            this.comprasCuentaDestino.Name = "comprasCuentaDestino";
+            this.constanciaNumeroDataGridViewTextBoxColumn.DataPropertyName = "ConstanciaNumero";
+            this.constanciaNumeroDataGridViewTextBoxColumn.HeaderText = "ConstanciaNumero";
+            this.constanciaNumeroDataGridViewTextBoxColumn.Name = "constanciaNumeroDataGridViewTextBoxColumn";
             // 
-            // comprasPago
+            // constanciaFechaPagoDataGridViewTextBoxColumn
             // 
-            this.comprasPago.DataPropertyName = "Pgo";
-            this.comprasPago.HeaderText = "Pago";
-            this.comprasPago.Name = "comprasPago";
+            this.constanciaFechaPagoDataGridViewTextBoxColumn.DataPropertyName = "ConstanciaFechaPago";
+            this.constanciaFechaPagoDataGridViewTextBoxColumn.HeaderText = "ConstanciaFechaPago";
+            this.constanciaFechaPagoDataGridViewTextBoxColumn.Name = "constanciaFechaPagoDataGridViewTextBoxColumn";
             // 
-            // comprasCodigo
+            // constanciaMontoDataGridViewTextBoxColumn
             // 
-            this.comprasCodigo.DataPropertyName = "Codigo";
-            this.comprasCodigo.HeaderText = "Código";
-            this.comprasCodigo.Name = "comprasCodigo";
+            this.constanciaMontoDataGridViewTextBoxColumn.DataPropertyName = "ConstanciaMonto";
+            this.constanciaMontoDataGridViewTextBoxColumn.HeaderText = "ConstanciaMonto";
+            this.constanciaMontoDataGridViewTextBoxColumn.Name = "constanciaMontoDataGridViewTextBoxColumn";
             // 
-            // comprasConstanciaNumero
+            // constanciaReferenciaDataGridViewTextBoxColumn
             // 
-            this.comprasConstanciaNumero.DataPropertyName = "ConstanciaNumero";
-            this.comprasConstanciaNumero.HeaderText = "Constancia Número";
-            this.comprasConstanciaNumero.Name = "comprasConstanciaNumero";
+            this.constanciaReferenciaDataGridViewTextBoxColumn.DataPropertyName = "ConstanciaReferencia";
+            this.constanciaReferenciaDataGridViewTextBoxColumn.HeaderText = "ConstanciaReferencia";
+            this.constanciaReferenciaDataGridViewTextBoxColumn.Name = "constanciaReferenciaDataGridViewTextBoxColumn";
             // 
-            // comprasConstanciaFechaPago
+            // bancarizacionFechaDataGridViewTextBoxColumn
             // 
-            this.comprasConstanciaFechaPago.DataPropertyName = "ConstanciaFechaPago";
-            this.comprasConstanciaFechaPago.HeaderText = "Constancia de Fecha de Pago";
-            this.comprasConstanciaFechaPago.Name = "comprasConstanciaFechaPago";
-            this.comprasConstanciaFechaPago.Width = 80;
+            this.bancarizacionFechaDataGridViewTextBoxColumn.DataPropertyName = "BancarizacionFecha";
+            this.bancarizacionFechaDataGridViewTextBoxColumn.HeaderText = "BancarizacionFecha";
+            this.bancarizacionFechaDataGridViewTextBoxColumn.Name = "bancarizacionFechaDataGridViewTextBoxColumn";
             // 
-            // comprasConstanciaMonto
+            // bancarizacionBcoDataGridViewTextBoxColumn
             // 
-            this.comprasConstanciaMonto.DataPropertyName = "ConstanciaMonto";
-            this.comprasConstanciaMonto.HeaderText = "Constancia Monto";
-            this.comprasConstanciaMonto.Name = "comprasConstanciaMonto";
+            this.bancarizacionBcoDataGridViewTextBoxColumn.DataPropertyName = "BancarizacionBco";
+            this.bancarizacionBcoDataGridViewTextBoxColumn.HeaderText = "BancarizacionBco";
+            this.bancarizacionBcoDataGridViewTextBoxColumn.Name = "bancarizacionBcoDataGridViewTextBoxColumn";
             // 
-            // comprasConstanciaReferencia
+            // bancarizacionOperacionDataGridViewTextBoxColumn
             // 
-            this.comprasConstanciaReferencia.DataPropertyName = "ConstanciaReferencia";
-            this.comprasConstanciaReferencia.HeaderText = "Constancia Referencia";
-            this.comprasConstanciaReferencia.Name = "comprasConstanciaReferencia";
+            this.bancarizacionOperacionDataGridViewTextBoxColumn.DataPropertyName = "BancarizacionOperacion";
+            this.bancarizacionOperacionDataGridViewTextBoxColumn.HeaderText = "BancarizacionOperacion";
+            this.bancarizacionOperacionDataGridViewTextBoxColumn.Name = "bancarizacionOperacionDataGridViewTextBoxColumn";
             // 
-            // BancarizacionFecha
+            // usuarioDataGridViewTextBoxColumn
             // 
-            this.BancarizacionFecha.DataPropertyName = "BancarizacionFecha";
-            this.BancarizacionFecha.HeaderText = "Bancarizacion Fecha";
-            this.BancarizacionFecha.Name = "BancarizacionFecha";
-            this.BancarizacionFecha.Width = 80;
+            this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario";
+            this.usuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
             // 
-            // BancarizacionBco
+            // fechaRegistroDataGridViewTextBoxColumn
             // 
-            this.BancarizacionBco.DataPropertyName = "BancarizacionBco";
-            this.BancarizacionBco.HeaderText = "Bancarizacion Bco";
-            this.BancarizacionBco.Name = "BancarizacionBco";
+            this.fechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro";
+            this.fechaRegistroDataGridViewTextBoxColumn.HeaderText = "FechaRegistro";
+            this.fechaRegistroDataGridViewTextBoxColumn.Name = "fechaRegistroDataGridViewTextBoxColumn";
             // 
-            // BancarizacionOperacion
+            // fechaModificacionDataGridViewTextBoxColumn
             // 
-            this.BancarizacionOperacion.DataPropertyName = "BancarizacionOperacion";
-            this.BancarizacionOperacion.HeaderText = "Bancarizacion Operacion";
-            this.BancarizacionOperacion.Name = "BancarizacionOperacion";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dgvRegistroVentas);
-            this.panel5.Location = new System.Drawing.Point(6, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1088, 446);
-            this.panel5.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Location = new System.Drawing.Point(6, 458);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1088, 54);
-            this.panel6.TabIndex = 4;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(555, 17);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 23);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Editar Ventas";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(384, 17);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 23);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Eliminar Compras";
-            this.button6.UseVisualStyleBackColor = true;
+            this.fechaModificacionDataGridViewTextBoxColumn.DataPropertyName = "FechaModificacion";
+            this.fechaModificacionDataGridViewTextBoxColumn.HeaderText = "FechaModificacion";
+            this.fechaModificacionDataGridViewTextBoxColumn.Name = "fechaModificacionDataGridViewTextBoxColumn";
             // 
             // FrmProgramaLibrosElectronicos
             // 
@@ -904,22 +1177,21 @@
             this.Text = "Programa de Libros Electrónicos";
             this.Load += new System.EventHandler(this.frmRegistroCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet)).EndInit();
             this.tabRegistros.ResumeLayout(false);
             this.tabCompras.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tabVentas.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVentas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTipoComprobanteBindingSource)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -978,7 +1250,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasObservacion;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnEditarCompras;
         private System.Windows.Forms.Button btnEliminarCompras;
         private System.Windows.Forms.Panel panel4;
         private SISCONTDataSet sISCONTDataSet;
@@ -1025,6 +1296,43 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLibroComprasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nRegDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEmisionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaPagoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cSerieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cNDocumentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pTipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pNumeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pDocumentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pNombreRazonSocialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn baseImponibleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iGVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noGravadaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descuentosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importeTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dolaresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoCambioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn percepcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDestinoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuentaDestinoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pgoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn constanciaNumeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn constanciaFechaPagoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn constanciaMontoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn constanciaReferenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bancarizacionFechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bancarizacionBcoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bancarizacionOperacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaModificacionDataGridViewTextBoxColumn;
     }
 }
 

@@ -276,8 +276,8 @@ namespace Presentacion
 
         private void dgvRegistroCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
+
+
             switch (e.ColumnIndex)
             {
                 case 3:
@@ -306,11 +306,21 @@ namespace Presentacion
                         dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 2].Value = razonSocial;
                     break;
                 case 18:
+                    //Calculos de No BaseInmponible (Falta probar)
+                    double baseImponible = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasBaseImponible"].Value);
+                    double descuento = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasDescuento"].Value);
+                    double igv = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasIgv"].Value);
+                    double noGravada = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasNoGravada"].Value);
+
+                    dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasIgv"].Value = Math.Round((baseImponible + descuento) * 0.18, 2);
+                    dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasImporteTotal"].Value = baseImponible + descuento + igv + noGravada;
+                    
                     double importe_total;
                     importe_total = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+
                     if (importe_total >= 3500)
                     {
-                        if (String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells[30].Value as String) | String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells[31].Value as String) || String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells[32].Value as String))
+                        if (String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells["BancarizacionFecha"].Value as String) | String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells["BancarizacionBco"].Value as String) || String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells["BancarizacionOperacion"].Value as String))
                         {
                             MessageBox.Show("Ingrese Bancarización");
                             dgvRegistroCompras.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
@@ -319,7 +329,7 @@ namespace Presentacion
                         {
                             dgvRegistroCompras.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
                         }
-                       
+
                     }
                     break;
                 case 12:
