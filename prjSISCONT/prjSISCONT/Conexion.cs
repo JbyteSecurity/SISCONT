@@ -8,7 +8,7 @@ namespace Datos
 {
     class Conexion
     { 
-        private SqlConnection conexion = new SqlConnection("Data Source=192.168.1.40\\SQLEXPRESS;Initial Catalog=SISCONT; User ID=sa; Password=sasa");
+        private SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-KMG1ASR;Initial Catalog=SISCONT; User ID=sa; Password=sasa");
         public SqlConnection openConnection()
         {
             if (conexion.State == ConnectionState.Closed)

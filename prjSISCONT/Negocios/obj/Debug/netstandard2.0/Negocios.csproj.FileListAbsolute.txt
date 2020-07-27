@@ -22,3 +22,15 @@ C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstanda
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.dll
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.pdb
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.deps.json
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.dll
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.pdb
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Datos.dll
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Datos.pdb
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csprojAssemblyReference.cache
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfoInputs.cache
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfo.cs
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.dll
+C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.pdb

@@ -224,7 +224,23 @@ namespace Presentacion
                     else
                         dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 2].Value = razonSocial;
                     break;
-                case 11:
+                case 17:
+                    double importe_total;
+                    importe_total = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                    if (importe_total >= 3500)
+                    {
+                        if (String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells[30].Value as String) | String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells[31].Value as String) || String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells[32].Value as String))
+                        {
+                            MessageBox.Show("Ingrese Bancarización");
+                            dgvRegistroCompras.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                        }
+                        else
+                        {
+                            dgvRegistroCompras.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+                        }
+                       
+                    }
+                    break;
                 case 21:
                     string codigo;
                     string cuenta;
@@ -268,7 +284,9 @@ namespace Presentacion
                     else
                         dgvRegistroVentas.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = razonSocial;
                     break;
-                case 10:
+                case 17:
+                    break;
+
                 case 21:
                     string codigo;
                     string cuenta;
