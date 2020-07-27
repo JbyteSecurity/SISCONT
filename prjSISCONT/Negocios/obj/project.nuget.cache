@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Deo632lVVItM5diF3ESIGeaAE672Y+cUdNbTFj7K4r/oaYf+Gp7bKdKxU3tTiHDgK5lM9ILrX4lXk/qj8JJlTA==",
+  "dgSpecHash": "mNn45d9VoRBuZhwUpCbDqiVQTl/MXMiN5L5BS8rLcBl0J1R47+XpIhhfdIMwCLHsax0FmWD4xXTm4+YIwk4zew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+  "projectFilePath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jordan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Jordan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Developers\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Developers\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

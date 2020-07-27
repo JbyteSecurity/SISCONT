@@ -8,11 +8,11 @@ namespace Negocios
 {
     public class TipoCambio
     {
-        private DaoTipoCambio daoTipoCambio = new DaoTipoCambio();
+        private DaoTipoCambio daoProveedor = new DaoTipoCambio();
         public DataTable show(string fecha)
         {
             DataTable dataTable = new DataTable();
-            dataTable = daoTipoCambio.show(fecha);
+            dataTable = daoProveedor.show(fecha);
             return dataTable;
         }
 
@@ -20,26 +20,26 @@ namespace Negocios
         {
 
             DataTable dataTableSuppliers = new DataTable();
-            dataTableSuppliers = daoTipoCambio.all(); ;
+            dataTableSuppliers = daoProveedor.all(); ;
             return dataTableSuppliers;
 
         }
 
         public bool save(string fecha, double compra, double venta)
         {
-            daoTipoCambio.insert(fecha, compra, venta);
+            daoProveedor.insert(fecha, compra, venta);
             return true;
         }
 
         public bool edit(int id, string fecha, double compra, double venta)
         {
-            daoTipoCambio.update(id, fecha, compra, venta);
+            daoProveedor.update(id, fecha, compra, venta);
             return true;
         }
 
         public bool delete(int id)
         {
-            daoTipoCambio.destroy(id);
+            daoProveedor.destroy(id);
             return true;
         }
     }

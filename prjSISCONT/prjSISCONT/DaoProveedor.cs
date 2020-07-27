@@ -14,7 +14,7 @@ namespace Datos
         private Conexion conexion = new Conexion();
         SqlCommand comando = new SqlCommand();
 
-        public string showProveedor(string ruc)
+        public string show(string ruc)
         {
             SqlDataReader sqlDataReaderProvider;
             DataTable dataTableProvider = new DataTable("tblProveedores");
@@ -38,7 +38,7 @@ namespace Datos
                 return null;
         }
 
-        public DataTable allSuppliers()
+        public DataTable all()
         {
             SqlDataReader sqlDataReader;
             DataTable dataTableSuppliers = new DataTable();

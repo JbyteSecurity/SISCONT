@@ -33,6 +33,18 @@
             this.tabCompras = new System.Windows.Forms.TabPage();
             this.tabVentas = new System.Windows.Forms.TabPage();
             this.dgvRegistroVentas = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtBuscarProveedor = new System.Windows.Forms.TextBox();
+            this.btnBuscarProveedor = new System.Windows.Forms.Button();
+            this.testlabel = new System.Windows.Forms.Label();
+            this.btnGuardarVentas = new System.Windows.Forms.Button();
+            this.btnGuardarCompras = new System.Windows.Forms.Button();
             this.ventasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,18 +79,11 @@
             this.ventasDetraccionSoles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasObservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtBuscarProveedor = new System.Windows.Forms.TextBox();
-            this.btnBuscarProveedor = new System.Windows.Forms.Button();
-            this.testlabel = new System.Windows.Forms.Label();
-            this.btnGuardarVentas = new System.Windows.Forms.Button();
-            this.btnGuardarCompras = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEliminarCompras = new System.Windows.Forms.Button();
+            this.btnEditarCompras = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.comprasID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,6 +117,9 @@
             this.BancarizacionFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BancarizacionBco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BancarizacionOperacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasFechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasFechaModificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).BeginInit();
             this.tabRegistros.SuspendLayout();
             this.tabCompras.SuspendLayout();
@@ -119,12 +127,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvRegistroCompras
             // 
             this.dgvRegistroCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistroCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.comprasID,
             this.comprasMes,
             this.comprasNumeroRegistro,
             this.comprasFechaEmision,
@@ -157,11 +168,14 @@
             this.comprasConstanciaReferencia,
             this.BancarizacionFecha,
             this.BancarizacionBco,
-            this.BancarizacionOperacion});
+            this.BancarizacionOperacion,
+            this.comprasUsuario,
+            this.comprasFechaRegistro,
+            this.comprasFechaModificado});
             this.dgvRegistroCompras.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRegistroCompras.Location = new System.Drawing.Point(3, 3);
+            this.dgvRegistroCompras.Location = new System.Drawing.Point(0, 0);
             this.dgvRegistroCompras.Name = "dgvRegistroCompras";
-            this.dgvRegistroCompras.Size = new System.Drawing.Size(1094, 454);
+            this.dgvRegistroCompras.Size = new System.Drawing.Size(1088, 446);
             this.dgvRegistroCompras.TabIndex = 0;
             this.dgvRegistroCompras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellContentClickEvent);
             this.dgvRegistroCompras.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistroCompras_CellEndEdit);
@@ -179,16 +193,17 @@
             this.tabRegistros.Location = new System.Drawing.Point(12, 120);
             this.tabRegistros.Name = "tabRegistros";
             this.tabRegistros.SelectedIndex = 0;
-            this.tabRegistros.Size = new System.Drawing.Size(1108, 486);
+            this.tabRegistros.Size = new System.Drawing.Size(1108, 544);
             this.tabRegistros.TabIndex = 1;
             // 
             // tabCompras
             // 
-            this.tabCompras.Controls.Add(this.dgvRegistroCompras);
+            this.tabCompras.Controls.Add(this.panel4);
+            this.tabCompras.Controls.Add(this.panel3);
             this.tabCompras.Location = new System.Drawing.Point(4, 22);
             this.tabCompras.Name = "tabCompras";
             this.tabCompras.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCompras.Size = new System.Drawing.Size(1100, 460);
+            this.tabCompras.Size = new System.Drawing.Size(1100, 518);
             this.tabCompras.TabIndex = 0;
             this.tabCompras.Text = "Compras";
             this.tabCompras.UseVisualStyleBackColor = true;
@@ -248,6 +263,122 @@
             this.dgvRegistroVentas.Size = new System.Drawing.Size(1094, 454);
             this.dgvRegistroVentas.TabIndex = 1;
             this.dgvRegistroVentas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistroVentas_CellEndEdit);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txtBuscarProveedor);
+            this.panel1.Controls.Add(this.btnBuscarProveedor);
+            this.panel1.Controls.Add(this.testlabel);
+            this.panel1.Controls.Add(this.btnGuardarVentas);
+            this.panel1.Controls.Add(this.btnGuardarCompras);
+            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1101, 87);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1101, 87);
+            this.panel2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(59, 36);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(255, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(961, 36);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Guardar Ventas";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnGuardarVentas_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(15, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(109, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Guardar Compras";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtBuscarProveedor
+            // 
+            this.txtBuscarProveedor.Location = new System.Drawing.Point(140, 39);
+            this.txtBuscarProveedor.Name = "txtBuscarProveedor";
+            this.txtBuscarProveedor.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarProveedor.TabIndex = 4;
+            // 
+            // btnBuscarProveedor
+            // 
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(59, 36);
+            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarProveedor.TabIndex = 3;
+            this.btnBuscarProveedor.Text = "Buscar";
+            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            // 
+            // testlabel
+            // 
+            this.testlabel.AutoSize = true;
+            this.testlabel.Location = new System.Drawing.Point(255, 42);
+            this.testlabel.Name = "testlabel";
+            this.testlabel.Size = new System.Drawing.Size(35, 13);
+            this.testlabel.TabIndex = 2;
+            this.testlabel.Text = "label1";
+            // 
+            // btnGuardarVentas
+            // 
+            this.btnGuardarVentas.Location = new System.Drawing.Point(857, 25);
+            this.btnGuardarVentas.Name = "btnGuardarVentas";
+            this.btnGuardarVentas.Size = new System.Drawing.Size(119, 23);
+            this.btnGuardarVentas.TabIndex = 1;
+            this.btnGuardarVentas.Text = "Guardar Ventas";
+            this.btnGuardarVentas.UseVisualStyleBackColor = true;
+            this.btnGuardarVentas.Click += new System.EventHandler(this.btnGuardarVentas_Click);
+            // 
+            // btnGuardarCompras
+            // 
+            this.btnGuardarCompras.Location = new System.Drawing.Point(721, 25);
+            this.btnGuardarCompras.Name = "btnGuardarCompras";
+            this.btnGuardarCompras.Size = new System.Drawing.Size(109, 23);
+            this.btnGuardarCompras.TabIndex = 0;
+            this.btnGuardarCompras.Text = "Guardar Compras";
+            this.btnGuardarCompras.UseVisualStyleBackColor = true;
+            this.btnGuardarCompras.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // ventasMes
             // 
@@ -421,127 +552,60 @@
             this.ventasObservacion.HeaderText = "Observación";
             this.ventasObservacion.Name = "ventasObservacion";
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtBuscarProveedor);
-            this.panel1.Controls.Add(this.btnBuscarProveedor);
-            this.panel1.Controls.Add(this.testlabel);
-            this.panel1.Controls.Add(this.btnGuardarVentas);
-            this.panel1.Controls.Add(this.btnGuardarCompras);
-            this.panel1.Location = new System.Drawing.Point(12, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 87);
-            this.panel1.TabIndex = 2;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnEditarCompras);
+            this.panel3.Controls.Add(this.btnEliminarCompras);
+            this.panel3.Location = new System.Drawing.Point(6, 458);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1088, 54);
+            this.panel3.TabIndex = 3;
             // 
-            // panel2
+            // btnEliminarCompras
             // 
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1101, 87);
-            this.panel2.TabIndex = 2;
+            this.btnEliminarCompras.Location = new System.Drawing.Point(384, 17);
+            this.btnEliminarCompras.Name = "btnEliminarCompras";
+            this.btnEliminarCompras.Size = new System.Drawing.Size(128, 23);
+            this.btnEliminarCompras.TabIndex = 0;
+            this.btnEliminarCompras.Text = "Eliminar Compras";
+            this.btnEliminarCompras.UseVisualStyleBackColor = true;
+            this.btnEliminarCompras.Click += new System.EventHandler(this.btnEliminarCompras_Click);
             // 
-            // textBox1
+            // btnEditarCompras
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.btnEditarCompras.Location = new System.Drawing.Point(555, 17);
+            this.btnEditarCompras.Name = "btnEditarCompras";
+            this.btnEditarCompras.Size = new System.Drawing.Size(128, 23);
+            this.btnEditarCompras.TabIndex = 1;
+            this.btnEditarCompras.Text = "Editar Ventas";
+            this.btnEditarCompras.UseVisualStyleBackColor = true;
+            this.btnEditarCompras.Click += new System.EventHandler(this.btnEditarCompras_Click);
             // 
-            // button1
+            // panel4
             // 
-            this.button1.Location = new System.Drawing.Point(59, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.dgvRegistroCompras);
+            this.panel4.Location = new System.Drawing.Point(6, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1088, 446);
+            this.panel4.TabIndex = 4;
             // 
-            // label1
+            // comprasID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(255, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(857, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Guardar Ventas";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnGuardarVentas_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(721, 25);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Guardar Compras";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtBuscarProveedor
-            // 
-            this.txtBuscarProveedor.Location = new System.Drawing.Point(140, 39);
-            this.txtBuscarProveedor.Name = "txtBuscarProveedor";
-            this.txtBuscarProveedor.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscarProveedor.TabIndex = 4;
-            // 
-            // btnBuscarProveedor
-            // 
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(59, 36);
-            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarProveedor.TabIndex = 3;
-            this.btnBuscarProveedor.Text = "Buscar";
-            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
-            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
-            // 
-            // testlabel
-            // 
-            this.testlabel.AutoSize = true;
-            this.testlabel.Location = new System.Drawing.Point(255, 42);
-            this.testlabel.Name = "testlabel";
-            this.testlabel.Size = new System.Drawing.Size(35, 13);
-            this.testlabel.TabIndex = 2;
-            this.testlabel.Text = "label1";
-            // 
-            // btnGuardarVentas
-            // 
-            this.btnGuardarVentas.Location = new System.Drawing.Point(857, 25);
-            this.btnGuardarVentas.Name = "btnGuardarVentas";
-            this.btnGuardarVentas.Size = new System.Drawing.Size(119, 23);
-            this.btnGuardarVentas.TabIndex = 1;
-            this.btnGuardarVentas.Text = "Guardar Ventas";
-            this.btnGuardarVentas.UseVisualStyleBackColor = true;
-            this.btnGuardarVentas.Click += new System.EventHandler(this.btnGuardarVentas_Click);
-            // 
-            // btnGuardarCompras
-            // 
-            this.btnGuardarCompras.Location = new System.Drawing.Point(721, 25);
-            this.btnGuardarCompras.Name = "btnGuardarCompras";
-            this.btnGuardarCompras.Size = new System.Drawing.Size(109, 23);
-            this.btnGuardarCompras.TabIndex = 0;
-            this.btnGuardarCompras.Text = "Guardar Compras";
-            this.btnGuardarCompras.UseVisualStyleBackColor = true;
-            this.btnGuardarCompras.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.comprasID.HeaderText = "#";
+            this.comprasID.Name = "comprasID";
+            this.comprasID.Width = 40;
             // 
             // comprasMes
             // 
             this.comprasMes.HeaderText = "Mes";
             this.comprasMes.Name = "comprasMes";
+            this.comprasMes.Width = 40;
             // 
             // comprasNumeroRegistro
             // 
@@ -552,11 +616,13 @@
             // 
             this.comprasFechaEmision.HeaderText = "Fecha de Emisión";
             this.comprasFechaEmision.Name = "comprasFechaEmision";
+            this.comprasFechaEmision.Width = 80;
             // 
             // comprasFechaPago
             // 
             this.comprasFechaPago.HeaderText = "Fecha de Pago";
             this.comprasFechaPago.Name = "comprasFechaPago";
+            this.comprasFechaPago.Width = 80;
             // 
             // comprasCdpTipo
             // 
@@ -564,6 +630,7 @@
             this.comprasCdpTipo.Name = "comprasCdpTipo";
             this.comprasCdpTipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.comprasCdpTipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.comprasCdpTipo.Width = 120;
             // 
             // comprasCdpSerie
             // 
@@ -594,6 +661,7 @@
             // 
             this.comprasProveedorRazonSocial.HeaderText = "Proveedor Razón Social";
             this.comprasProveedorRazonSocial.Name = "comprasProveedorRazonSocial";
+            this.comprasProveedorRazonSocial.Width = 200;
             // 
             // comprasCuenta
             // 
@@ -679,6 +747,7 @@
             // 
             this.comprasConstanciaFechaPago.HeaderText = "Constancia de Fecha de Pago";
             this.comprasConstanciaFechaPago.Name = "comprasConstanciaFechaPago";
+            this.comprasConstanciaFechaPago.Width = 80;
             // 
             // comprasConstanciaMonto
             // 
@@ -694,6 +763,7 @@
             // 
             this.BancarizacionFecha.HeaderText = "Bancarizacion Fecha";
             this.BancarizacionFecha.Name = "BancarizacionFecha";
+            this.BancarizacionFecha.Width = 80;
             // 
             // BancarizacionBco
             // 
@@ -705,18 +775,33 @@
             this.BancarizacionOperacion.HeaderText = "Bancarizacion Operacion";
             this.BancarizacionOperacion.Name = "BancarizacionOperacion";
             // 
+            // comprasUsuario
+            // 
+            this.comprasUsuario.HeaderText = "Usuario";
+            this.comprasUsuario.Name = "comprasUsuario";
+            // 
+            // comprasFechaRegistro
+            // 
+            this.comprasFechaRegistro.HeaderText = "Registrado";
+            this.comprasFechaRegistro.Name = "comprasFechaRegistro";
+            // 
+            // comprasFechaModificado
+            // 
+            this.comprasFechaModificado.HeaderText = "Modificado";
+            this.comprasFechaModificado.Name = "comprasFechaModificado";
+            // 
             // FrmProgramaLibrosElectronicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 618);
+            this.ClientSize = new System.Drawing.Size(1132, 676);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabRegistros);
             this.Name = "FrmProgramaLibrosElectronicos";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formato 8.1 .::. Registro de Compra";
+            this.Text = "Programa de Libros Electrónicos";
             this.Load += new System.EventHandler(this.frmRegistroCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).EndInit();
             this.tabRegistros.ResumeLayout(false);
@@ -727,6 +812,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -744,6 +831,12 @@
         private System.Windows.Forms.Label testlabel;
         private System.Windows.Forms.TextBox txtBuscarProveedor;
         private System.Windows.Forms.Button btnBuscarProveedor;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasNumeroRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasFechaEmision;
@@ -778,12 +871,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasDetraccionSoles;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasReferencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventasObservacion;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEditarCompras;
+        private System.Windows.Forms.Button btnEliminarCompras;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comprasID;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasNumeroRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasFechaEmision;
@@ -817,6 +909,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BancarizacionFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn BancarizacionBco;
         private System.Windows.Forms.DataGridViewTextBoxColumn BancarizacionOperacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comprasUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comprasFechaRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comprasFechaModificado;
     }
 }
 

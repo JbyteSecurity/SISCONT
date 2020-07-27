@@ -20,6 +20,8 @@ namespace Presentacion
 
         private Compras compras = new Compras();
         private Ventas ventas = new Ventas();
+
+        bool edit = false;
         public FrmProgramaLibrosElectronicos()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Presentacion
         private void frmRegistroCompra_Load(object sender, EventArgs e)
         {
             llenarComboTipoComprobante();
+            showCurrentMonth();
         }
 
         private void cellContentClickEvent(object sender, DataGridViewCellEventArgs e)
@@ -44,6 +47,21 @@ namespace Presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             guardarCompras();
+        }
+
+        //MOSTRAR COMPRAS POR MES ACTUAL
+        private void showCurrentMonth()
+        {
+            /*DataTable dataTable = new DataTable();
+            dataTable = compras.allCurrentMonth();
+
+            DataTable tempDT = new DataTable();
+            tempDT = dataTable.DefaultView.ToTable(true, "Mes", "FechaEmision");
+            //Now bind this to DataGridView
+            dgvRegistroCompras.DataSource = tempDT;*/
+
+            dgvRegistroCompras.DataSource = compras.allCurrentMonth();
+
         }
 
         //GUARDAR Compras 
@@ -66,6 +84,7 @@ namespace Presentacion
                             Convert.ToString(row.Cells["comprasProveedorTipo"].Value),
                             Convert.ToString(row.Cells["comprasProveedorNumeroDocumento"].Value),
                             Convert.ToString(row.Cells["comprasProveedorTipoDocumento"].Value),
+
                             Convert.ToString(row.Cells["comprasProveedorRazonSocial"].Value),
                             Convert.ToString(row.Cells["comprasCuenta"].Value),
                             Convert.ToString(row.Cells["comprasDescripcion"].Value),
@@ -76,6 +95,7 @@ namespace Presentacion
                             Convert.ToDouble(row.Cells["comprasImporteTotal"].Value),
                             Convert.ToDouble(row.Cells["comprasDolares"].Value),
                             Convert.ToDouble(row.Cells["comprasTipoCambio"].Value),
+
                             Convert.ToDouble(row.Cells["comprasPercepcion"].Value),
                             Convert.ToString(row.Cells["comprasDestino"].Value),
                             Convert.ToString(row.Cells["comprasDescripcion"].Value),
@@ -85,7 +105,12 @@ namespace Presentacion
                             Convert.ToString(row.Cells["comprasConstanciaNumero"].Value),
                             Convert.ToString(row.Cells["comprasConstanciaFechaPago"].Value),
                             Convert.ToDouble(row.Cells["comprasConstanciaMonto"].Value),
-                            Convert.ToString(row.Cells["comprasConstanciaReferencia"].Value)
+                            Convert.ToString(row.Cells["comprasConstanciaReferencia"].Value),
+
+                            Convert.ToString(row.Cells["BancarizacionFecha"].Value),
+                            Convert.ToString(row.Cells["BancarizacionBco"].Value),
+                            Convert.ToInt32(row.Cells["BancarizacionOperacion"].Value),
+                            "user02"
                         );
                     }
                 }
@@ -143,6 +168,7 @@ namespace Presentacion
                             Convert.ToDouble(row.Cells["ventasDetraccionSoles"].Value),
                             Convert.ToString(row.Cells["ventasReferencia"].Value),
                             Convert.ToString(row.Cells["ventasObservacion"].Value)
+
                         );
                         MessageBox.Show("Ventas registradas correctamente", "Ventas .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     } else
@@ -199,7 +225,7 @@ namespace Presentacion
             
             switch (e.ColumnIndex)
             {
-                case 2:
+                case 3:
                     string fecha, compra, venta;
                     DataTable dataTableTipoCambio = new DataTable();
 
@@ -214,7 +240,7 @@ namespace Presentacion
                     else
                         dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasTipoCambio"].Value = venta;
                     break;
-                case 8:
+                case 9:
                     string ruc;
                     string razonSocial;
                     ruc = dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasProveedorNumeroDocumento"].Value.ToString();
@@ -224,7 +250,7 @@ namespace Presentacion
                     else
                         dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 2].Value = razonSocial;
                     break;
-                case 17:
+                case 18:
                     double importe_total;
                     importe_total = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
                     if (importe_total >= 3500)
@@ -241,7 +267,8 @@ namespace Presentacion
                        
                     }
                     break;
-                case 21:
+                case 12:
+                case 22:
                     string codigo;
                     string cuenta;
                     codigo = dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
@@ -303,6 +330,38 @@ namespace Presentacion
         private void menuItemProveedores_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnEliminarCompras_Click(object sender, EventArgs e)
+        {
+            /*try
+            {
+                foreach (DataGridViewRow row in dgvRegistroVentas.Rows)
+                {
+                    if (!string.IsNullOrEmpty(Convert.ToString(row.Cells["ventasMes"].Value)))
+                    {
+                        ventas.destroy(
+                            Convert.ToInt32(row.Cells["ventasMes"].Value)
+
+                        );
+                        MessageBox.Show("Ventas registradas correctamente", "Ventas .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se han encontrado ventas a guardar", "Ventas .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se pudo insertar los datos por: " + ex);
+            }*/
+        }
+
+        private void btnEditarCompras_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

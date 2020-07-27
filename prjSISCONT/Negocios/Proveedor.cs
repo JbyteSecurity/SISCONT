@@ -9,38 +9,34 @@ namespace Negocios
 {
     public class Proveedor
     {
-        private DaoProveedor daoTipoCambio = new DaoProveedor();
+        private DaoProveedor daoProveedor = new DaoProveedor();
         public string getSupplierName(string ruc)
         {
             string razonSocial;
-            razonSocial = daoTipoCambio.showProveedor(ruc);
+            razonSocial = daoProveedor.show(ruc);
             return razonSocial;
         }
 
         public DataTable allSuppliers()
         {
-            
-            DataTable dataTableSuppliers = new DataTable("tblProveedores");
-            dataTableSuppliers = daoTipoCambio.allSuppliers(); ;
-            return dataTableSuppliers;
-            
+            return daoProveedor.all();
         }
 
         public bool save(string ruc, string razonSocial)
         {
-            daoTipoCambio.insert(ruc, razonSocial);
+            daoProveedor.insert(ruc, razonSocial);
             return true;
         }
 
         public bool edit(int id, string ruc, string razonSocial)
         {
-            daoTipoCambio.update(id, ruc, razonSocial);
+            daoProveedor.update(id, ruc, razonSocial);
             return true;
         }
 
         public bool delete(int id)
         {
-            daoTipoCambio.destroy(id);
+            daoProveedor.destroy(id);
             return true;
         }
     }
