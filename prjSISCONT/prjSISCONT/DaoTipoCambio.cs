@@ -17,12 +17,12 @@ namespace Datos
         {
             SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_tipo_cambio";
             comando.CommandType = CommandType.StoredProcedure;
             sqlDataReader = comando.ExecuteReader();
             dataTable.Load(sqlDataReader);
-            conexion.closeConnection();
+            conexion.CloseConnection();
             return dataTable;
 
         }
@@ -32,7 +32,7 @@ namespace Datos
             SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
 
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_show_tipo_cambio";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -43,13 +43,13 @@ namespace Datos
             dataTable.Load(sqlDataReader);
             comando.Parameters.Clear();
 
-            conexion.closeConnection();
+            conexion.CloseConnection();
             return dataTable;
         }
 
         public void insert(string fecha, double compra, double venta)
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_insert_tipo_cambio";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -59,12 +59,12 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
 
         public void update(int id, string fecha, double compra, double venta)
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_update_tipo_cambio";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -75,12 +75,12 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
 
         public void destroy(int id)
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_delete_tipo_cambio";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -88,7 +88,7 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
     }
 }

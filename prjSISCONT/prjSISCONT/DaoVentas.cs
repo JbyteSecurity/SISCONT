@@ -23,7 +23,7 @@ namespace Datos
             string codigo, string constanciaNumero, string constanciaFechaPago, double detraccionSoles, string referencia, string observacion
             )
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_insert_registro_ventas";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -63,7 +63,7 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
     }
 }

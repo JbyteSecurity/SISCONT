@@ -9,13 +9,13 @@ namespace Datos
     class Conexion
     { 
         private SqlConnection conexion = new SqlConnection("Data Source=192.168.1.40\\SQLEXPRESS;Initial Catalog=SISCONT; User ID=sa; Password=sasa");
-        public SqlConnection openConnection()
+        public SqlConnection OpenConnection()
         {
             if (conexion.State == ConnectionState.Closed)
                 conexion.Open();
             return conexion;
         }
-        public SqlConnection closeConnection()
+        public SqlConnection CloseConnection()
         {
             if (conexion.State == ConnectionState.Open)
                 conexion.Close();

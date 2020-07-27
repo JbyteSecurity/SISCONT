@@ -17,12 +17,12 @@ namespace Datos
         {
             SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_registro_ventas";
             comando.CommandType = CommandType.StoredProcedure;
             sqlDataReader = comando.ExecuteReader();
             dataTable.Load(sqlDataReader);
-            conexion.closeConnection();
+            conexion.CloseConnection();
             return dataTable;
         }
         
@@ -30,12 +30,12 @@ namespace Datos
         {
             SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_current_month_compras";
             comando.CommandType = CommandType.StoredProcedure;
             sqlDataReader = comando.ExecuteReader();
             dataTable.Load(sqlDataReader);
-            conexion.closeConnection();
+            conexion.CloseConnection();
             return dataTable;
         }
 
@@ -47,7 +47,7 @@ namespace Datos
             double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario
             )
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_insert_registro_compras";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -88,7 +88,7 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
 
         public void update(
@@ -99,7 +99,7 @@ namespace Datos
             double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario
             )
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_update_registro_compras";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -141,18 +141,18 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
 
         public void destroy(int id)
         {
-            comando.Connection = conexion.openConnection();
-            comando.CommandText = "sp_destroy_proveedor";
+            comando.Connection = conexion.OpenConnection();
+            comando.CommandText = "sp_delete_compras";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@id", id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
     }
 }

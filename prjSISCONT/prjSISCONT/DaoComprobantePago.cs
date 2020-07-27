@@ -17,12 +17,12 @@ namespace Datos
         {
             SqlDataReader leer;
             DataTable dataTableCDPType = new DataTable();
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_tipo_comprobante";
             comando.CommandType = CommandType.StoredProcedure;
             leer = comando.ExecuteReader();
             dataTableCDPType.Load(leer);
-            conexion.closeConnection();
+            conexion.CloseConnection();
             return dataTableCDPType;
 
         }

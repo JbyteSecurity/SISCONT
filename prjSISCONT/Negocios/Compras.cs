@@ -108,5 +108,11 @@ namespace Negocios
                 usuario
                 );
         }
+
+        public bool delete(int id)
+        {
+            daoCompras.destroy(id);
+            return true;
+        }
     }
 }

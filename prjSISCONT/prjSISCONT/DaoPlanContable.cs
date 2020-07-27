@@ -18,7 +18,7 @@ namespace Datos
             SqlDataReader sqlDataReaderPlanContable;
             DataTable dataTableProvider = new DataTable("tblPlanContable");
 
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_show_name_cuenta";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -29,7 +29,7 @@ namespace Datos
             dataTableProvider.Load(sqlDataReaderPlanContable);
             comando.Parameters.Clear();
 
-            conexion.closeConnection();
+            conexion.CloseConnection();
 
             if (dataTableProvider.Rows.Count > 0)
                 return dataTableProvider.Rows[0]["Cuenta"].ToString();

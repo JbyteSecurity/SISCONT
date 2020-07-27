@@ -19,7 +19,7 @@ namespace Datos
             SqlDataReader sqlDataReaderProvider;
             DataTable dataTableProvider = new DataTable("tblProveedores");
 
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_show_name_proveedor";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -30,7 +30,7 @@ namespace Datos
             dataTableProvider.Load(sqlDataReaderProvider);
             comando.Parameters.Clear();
 
-            conexion.closeConnection();
+            conexion.CloseConnection();
 
             if (dataTableProvider.Rows.Count > 0)
                 return dataTableProvider.Rows[0]["RazonSocial"].ToString();
@@ -42,19 +42,19 @@ namespace Datos
         {
             SqlDataReader sqlDataReader;
             DataTable dataTableSuppliers = new DataTable();
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_proveedor";
             comando.CommandType = CommandType.StoredProcedure;
             sqlDataReader = comando.ExecuteReader();
             dataTableSuppliers.Load(sqlDataReader);
-            conexion.closeConnection();
+            conexion.CloseConnection();
             return dataTableSuppliers;
 
         }
 
         public void insert(string ruc, string razonSocial)
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_insert_proveedor";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -63,12 +63,12 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
 
         public void update(int id, string ruc, string razonSocial)
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_update_proveedor";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -78,18 +78,18 @@ namespace Datos
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
 
         public void destroy(int id)
         {
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_destroy_proveedor";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@id", id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
-            conexion.closeConnection();
+            conexion.CloseConnection();
         }
     }
 }

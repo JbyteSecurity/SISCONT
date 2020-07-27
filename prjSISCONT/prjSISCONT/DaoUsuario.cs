@@ -19,7 +19,7 @@ namespace Datos
             SqlDataReader sqlDataReaderProvider;
             DataTable dataTableProvider = new DataTable("tblUsuarios");
 
-            comando.Connection = conexion.openConnection();
+            comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_login";
             comando.CommandType = CommandType.StoredProcedure;
 
@@ -31,7 +31,7 @@ namespace Datos
             dataTableProvider.Load(sqlDataReaderProvider);
             comando.Parameters.Clear();
 
-            conexion.closeConnection();
+            conexion.CloseConnection();
 
             if (dataTableProvider.Rows.Count > 0)
                 return dataTableProvider;

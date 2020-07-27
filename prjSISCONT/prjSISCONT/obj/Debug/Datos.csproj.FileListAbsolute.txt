@@ -6,14 +6,6 @@ C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj
 C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
 C:\Users\Pedro\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.dll
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.pdb
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.Properties.Resources.resources
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.GenerateResource.cache
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
-C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.dll
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.pdb
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache
@@ -22,3 +14,11 @@ C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.cspro
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.dll
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.pdb
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.Properties.Resources.resources
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.GenerateResource.cache
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
+C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
