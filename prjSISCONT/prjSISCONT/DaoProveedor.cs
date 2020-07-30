@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Datos
 {
@@ -12,11 +13,11 @@ namespace Datos
     public class DaoProveedor
     {
         private Conexion conexion = new Conexion();
-        SqlCommand comando = new SqlCommand();
+        MySqlCommand comando = new MySqlCommand();
 
         public string show(string ruc)
         {
-            SqlDataReader sqlDataReaderProvider;
+            MySqlDataReader sqlDataReaderProvider;
             DataTable dataTableProvider = new DataTable("tblProveedores");
 
             comando.Connection = conexion.OpenConnection();
@@ -40,7 +41,7 @@ namespace Datos
 
         public DataTable all()
         {
-            SqlDataReader sqlDataReader;
+            MySqlDataReader sqlDataReader;
             DataTable dataTableSuppliers = new DataTable();
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_proveedor";

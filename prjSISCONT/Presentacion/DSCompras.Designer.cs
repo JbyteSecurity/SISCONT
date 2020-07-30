@@ -2243,7 +2243,7 @@ namespace Presentacion.DSComprasTableAdapters {
         
         private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        private global::System.Data.SqlClient.MySqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
@@ -2286,7 +2286,7 @@ namespace Presentacion.DSComprasTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
@@ -2320,7 +2320,7 @@ namespace Presentacion.DSComprasTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+        protected global::System.Data.SqlClient.MySqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -2386,7 +2386,7 @@ namespace Presentacion.DSComprasTableAdapters {
             tableMapping.ColumnMappings.Add("FechaModificacion", "FechaModificacion");
             tableMapping.ColumnMappings.Add("ConversionDolar", "ConversionDolar");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblRegistroCompras] WHERE (([idLibroCompras] = @Original_idLib" +
                 "roCompras) AND ((@IsNull_Mes = 1 AND [Mes] IS NULL) OR ([Mes] = @Original_Mes)) " +
@@ -2451,7 +2451,7 @@ namespace Presentacion.DSComprasTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaModificacion", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ConversionDolar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ConversionDolar", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ConversionDolar", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ConversionDolar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblRegistroCompras] ([Mes], [NReg], [FechaEmision], [FechaPago" +
                 "], [CTipo], [CSerie], [CNDocumento], [PTipo], [PNumero], [PDocumento], [PNombreR" +
@@ -2513,7 +2513,7 @@ namespace Presentacion.DSComprasTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaRegistro", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaModificacion", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConversionDolar", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ConversionDolar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblRegistroCompras] SET [Mes] = @Mes, [NReg] = @NReg, [FechaEmision" +
                 "] = @FechaEmision, [FechaPago] = @FechaPago, [CTipo] = @CTipo, [CSerie] = @CSeri" +
@@ -2649,8 +2649,8 @@ namespace Presentacion.DSComprasTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection = new global::System.Data.SqlClient.MySqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT idLibroCompras, Mes, NReg, FechaEmision, FechaPago, CTipo, CSerie, CNDocumento, PTipo, PNumero, PDocumento, PNombreRazonSocial, Cuenta, Descripcion, BaseImponible, IGV, NoGravada, Descuentos, ImporteTotal, Dolares, TipoCambio, Percepcion, Destino, DescripcionDestino, CuentaDestino, Pgo, Codigo, ConstanciaNumero, ConstanciaFechaPago, ConstanciaMonto, ConstanciaReferencia, BancarizacionFecha, BancarizacionBco, BancarizacionOperacion, Usuario, FechaRegistro, FechaModificacion, ConversionDolar FROM dbo.tblRegistroCompras";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;

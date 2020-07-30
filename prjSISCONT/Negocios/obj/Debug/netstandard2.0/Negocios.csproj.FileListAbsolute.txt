@@ -22,6 +22,7 @@ C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.dll
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.pdb
+<<<<<<< HEAD
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.deps.json
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.dll
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.pdb
@@ -46,3 +47,31 @@ C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Neg
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.dll
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.pdb
+=======
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.deps.json
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Negocios.pdb
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Datos.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\MySql.Data.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Google.Protobuf.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Zstandard.Net.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\BouncyCastle.Crypto.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Ubiety.Dns.Core.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Renci.SshNet.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\System.Buffers.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\K4os.Compression.LZ4.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\K4os.Hash.xxHash.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\System.Memory.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\System.Numerics.Vectors.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\Datos.pdb
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\bin\Debug\netstandard2.0\MySql.Data.xml
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csprojAssemblyReference.cache
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfoInputs.cache
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfo.cs
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Negocios\obj\Debug\netstandard2.0\Negocios.pdb
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1

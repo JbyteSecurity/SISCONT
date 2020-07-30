@@ -14,6 +14,7 @@ C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.cspro
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
 C:\Users\Jordan\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
+<<<<<<< HEAD
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.dll
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.pdb
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache
@@ -30,3 +31,28 @@ C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prj
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache
+=======
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.pdb
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\MySql.Data.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Google.Protobuf.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Zstandard.Net.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Renci.SshNet.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\System.Buffers.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\System.Memory.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\MySql.Data.xml
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.Properties.Resources.resources
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.GenerateResource.cache
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
+C:\Users\Developers\source\repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1

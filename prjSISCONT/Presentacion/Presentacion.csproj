@@ -104,9 +104,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="FrmDetraccion.resx">
       <DependentUpon>FrmDetraccion.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <Compile Include="sdRegistroCompras.cs">
+      <DependentUpon>sdRegistroCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sdRegistroCompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sdRegistroCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISCONTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISCONTDataSet.xsd</DependentUpon>
+    </Compile>
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +193,9 @@
       <Project>{c0657d2b-8909-43be-b986-6a54e4ef7697}</Project>
       <Name>Negocios</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

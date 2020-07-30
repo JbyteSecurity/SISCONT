@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Datos
 {
     public class DaoPlanContable
     {
         private Conexion conexion = new Conexion();
-        SqlCommand comando = new SqlCommand();
+        MySqlCommand comando = new MySqlCommand();
 
         public string showAcount(string codigo)
         {
-            SqlDataReader sqlDataReaderPlanContable;
+            MySqlDataReader sqlDataReaderPlanContable;
             DataTable dataTableProvider = new DataTable("tblPlanContable");
 
             comando.Connection = conexion.OpenConnection();

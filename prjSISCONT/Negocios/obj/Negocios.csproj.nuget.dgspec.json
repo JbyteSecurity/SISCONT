@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
         "packagesPath": "C:\\Users\\Developers\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
+=======
+    "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+        "projectName": "Negocios",
+        "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+        "packagesPath": "C:\\Users\\Developers\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Developers\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +41,13 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
                 "projectPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
+=======
+              "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
+                "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
               }
             }
           }
@@ -63,11 +82,19 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
       "restore": {
         "projectUniqueName": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj",
         "projectName": "Datos",
         "projectPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
+=======
+    "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj",
+        "projectName": "Datos",
+        "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
       },
       "frameworks": {
         "net46": {}

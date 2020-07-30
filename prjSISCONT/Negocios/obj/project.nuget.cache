@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "JJDvfhW5IJCTI7XJpP9LB1KdKy1hVNHDTYNXn5pPuKy4kb2/WH6ra/t8uus7nFZ2mtX0ABkD+TC3F+MtW6wbDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+=======
+  "dgSpecHash": "mNn45d9VoRBuZhwUpCbDqiVQTl/MXMiN5L5BS8rLcBl0J1R47+XpIhhfdIMwCLHsax0FmWD4xXTm4+YIwk4zew==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+>>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
   "expectedPackageFiles": [
     "C:\\Users\\Developers\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Developers\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
