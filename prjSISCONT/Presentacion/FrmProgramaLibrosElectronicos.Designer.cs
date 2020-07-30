@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvRegistroCompras = new System.Windows.Forms.DataGridView();
             this.tabRegistros = new System.Windows.Forms.TabControl();
             this.tabCompras = new System.Windows.Forms.TabPage();
@@ -96,12 +96,9 @@
             this.testlabel = new System.Windows.Forms.Label();
             this.btnGuardarVentas = new System.Windows.Forms.Button();
             this.btnGuardarCompras = new System.Windows.Forms.Button();
-            this.sISCONTDataSet = new Presentacion.SISCONTDataSet();
+            this.dSCompras = new Presentacion.DSCompras();
             this.tblRegistroComprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblRegistroComprasTableAdapter = new Presentacion.SISCONTDataSetTableAdapters.tblRegistroComprasTableAdapter();
-            this.tblRegistroComprasTableAdapter1 = new Presentacion.sdRegistroComprasTableAdapters.tblRegistroComprasTableAdapter();
-            this.tblRegistroComprasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sdRegistroCompras = new Presentacion.sdRegistroCompras();
+            this.tblRegistroComprasTableAdapter = new Presentacion.DSComprasTableAdapters.tblRegistroComprasTableAdapter();
             this.comprasID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comprasNumeroRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -148,10 +145,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCompras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sdRegistroCompras)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRegistroCompras
@@ -194,7 +189,7 @@
             this.BancarizacionFecha,
             this.BancarizacionBco,
             this.BancarizacionOperacion});
-            this.dgvRegistroCompras.DataSource = this.tblRegistroComprasBindingSource1;
+            this.dgvRegistroCompras.DataSource = this.tblRegistroComprasBindingSource;
             this.dgvRegistroCompras.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRegistroCompras.Location = new System.Drawing.Point(0, 0);
             this.dgvRegistroCompras.Name = "dgvRegistroCompras";
@@ -654,33 +649,19 @@
             this.btnGuardarCompras.UseVisualStyleBackColor = true;
             this.btnGuardarCompras.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // sISCONTDataSet
+            // dSCompras
             // 
-            this.sISCONTDataSet.DataSetName = "SISCONTDataSet";
-            this.sISCONTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dSCompras.DataSetName = "DSCompras";
+            this.dSCompras.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblRegistroComprasBindingSource
             // 
             this.tblRegistroComprasBindingSource.DataMember = "tblRegistroCompras";
-            this.tblRegistroComprasBindingSource.DataSource = this.sISCONTDataSet;
+            this.tblRegistroComprasBindingSource.DataSource = this.dSCompras;
             // 
             // tblRegistroComprasTableAdapter
             // 
             this.tblRegistroComprasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tblRegistroComprasTableAdapter1
-            // 
-            this.tblRegistroComprasTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tblRegistroComprasBindingSource1
-            // 
-            this.tblRegistroComprasBindingSource1.DataMember = "tblRegistroCompras";
-            this.tblRegistroComprasBindingSource1.DataSource = this.sdRegistroCompras;
-            // 
-            // sdRegistroCompras
-            // 
-            this.sdRegistroCompras.DataSetName = "sdRegistroCompras";
-            this.sdRegistroCompras.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comprasID
             // 
@@ -693,8 +674,8 @@
             // comprasMes
             // 
             this.comprasMes.DataPropertyName = "Mes";
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Aqua;
-            this.comprasMes.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Aqua;
+            this.comprasMes.DefaultCellStyle = dataGridViewCellStyle1;
             this.comprasMes.HeaderText = "Mes";
             this.comprasMes.Name = "comprasMes";
             this.comprasMes.Width = 40;
@@ -768,16 +749,16 @@
             // comprasCuenta
             // 
             this.comprasCuenta.DataPropertyName = "Cuenta";
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Aqua;
-            this.comprasCuenta.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Aqua;
+            this.comprasCuenta.DefaultCellStyle = dataGridViewCellStyle2;
             this.comprasCuenta.HeaderText = "Cuenta";
             this.comprasCuenta.Name = "comprasCuenta";
             // 
             // comprasDescripcion
             // 
             this.comprasDescripcion.DataPropertyName = "Descripcion";
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Aqua;
-            this.comprasDescripcion.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Aqua;
+            this.comprasDescripcion.DefaultCellStyle = dataGridViewCellStyle3;
             this.comprasDescripcion.HeaderText = "Descripción";
             this.comprasDescripcion.Name = "comprasDescripcion";
             // 
@@ -826,8 +807,8 @@
             // comprasConversionDolares
             // 
             this.comprasConversionDolares.DataPropertyName = "ConversionDolar";
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Cyan;
-            this.comprasConversionDolares.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Cyan;
+            this.comprasConversionDolares.DefaultCellStyle = dataGridViewCellStyle4;
             this.comprasConversionDolares.HeaderText = "Conversión Dólares (S/.)";
             this.comprasConversionDolares.Name = "comprasConversionDolares";
             this.comprasConversionDolares.ReadOnly = true;
@@ -841,40 +822,40 @@
             // comprasDestino
             // 
             this.comprasDestino.DataPropertyName = "Destino";
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Aqua;
-            this.comprasDestino.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Aqua;
+            this.comprasDestino.DefaultCellStyle = dataGridViewCellStyle5;
             this.comprasDestino.HeaderText = "Destino";
             this.comprasDestino.Name = "comprasDestino";
             // 
             // comprasDescripcionDestino
             // 
             this.comprasDescripcionDestino.DataPropertyName = "DescripcionDestino";
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Aqua;
-            this.comprasDescripcionDestino.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Aqua;
+            this.comprasDescripcionDestino.DefaultCellStyle = dataGridViewCellStyle6;
             this.comprasDescripcionDestino.HeaderText = "Descripción Destino";
             this.comprasDescripcionDestino.Name = "comprasDescripcionDestino";
             // 
             // comprasCuentaDestino
             // 
             this.comprasCuentaDestino.DataPropertyName = "CuentaDestino";
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Aqua;
-            this.comprasCuentaDestino.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Aqua;
+            this.comprasCuentaDestino.DefaultCellStyle = dataGridViewCellStyle7;
             this.comprasCuentaDestino.HeaderText = "Cuenta Destino";
             this.comprasCuentaDestino.Name = "comprasCuentaDestino";
             // 
             // comprasPago
             // 
             this.comprasPago.DataPropertyName = "Pgo";
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.Aqua;
-            this.comprasPago.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Aqua;
+            this.comprasPago.DefaultCellStyle = dataGridViewCellStyle8;
             this.comprasPago.HeaderText = "Pago";
             this.comprasPago.Name = "comprasPago";
             // 
             // comprasCodigo
             // 
             this.comprasCodigo.DataPropertyName = "Codigo";
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Aqua;
-            this.comprasCodigo.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Aqua;
+            this.comprasCodigo.DefaultCellStyle = dataGridViewCellStyle9;
             this.comprasCodigo.HeaderText = "Código";
             this.comprasCodigo.Name = "comprasCodigo";
             // 
@@ -948,10 +929,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sISCONTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCompras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRegistroComprasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sdRegistroCompras)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1016,12 +995,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel5;
-        private SISCONTDataSet sISCONTDataSet;
+        private DSCompras dSCompras;
         private System.Windows.Forms.BindingSource tblRegistroComprasBindingSource;
-        private SISCONTDataSetTableAdapters.tblRegistroComprasTableAdapter tblRegistroComprasTableAdapter;
-        private sdRegistroComprasTableAdapters.tblRegistroComprasTableAdapter tblRegistroComprasTableAdapter1;
-        private System.Windows.Forms.BindingSource tblRegistroComprasBindingSource1;
-        private sdRegistroCompras sdRegistroCompras;
+        private DSComprasTableAdapters.tblRegistroComprasTableAdapter tblRegistroComprasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasID;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn comprasNumeroRegistro;

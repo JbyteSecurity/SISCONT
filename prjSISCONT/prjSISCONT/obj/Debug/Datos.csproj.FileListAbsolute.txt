@@ -22,3 +22,11 @@ C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.c
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.dll
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\bin\Debug\Datos.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.Properties.Resources.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.GenerateResource.cache
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.dll
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\prjSISCONT\obj\Debug\Datos.csprojAssemblyReference.cache

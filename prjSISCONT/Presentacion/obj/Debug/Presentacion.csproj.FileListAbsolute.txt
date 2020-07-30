@@ -51,3 +51,23 @@ C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Prese
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Developers\Source\Repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Negocios.dll
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Datos.dll
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Negocios.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\bin\Debug\Datos.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmLogin.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmPrincipal.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmProveedor.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmProgramaLibrosElectronicos.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmTipoCambio.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmDetraccion.resources

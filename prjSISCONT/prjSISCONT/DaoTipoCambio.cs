@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Datos
 {
@@ -36,7 +37,7 @@ namespace Datos
             comando.CommandText = "sp_show_tipo_cambio";
             comando.CommandType = CommandType.StoredProcedure;
 
-            comando.Parameters.AddWithValue("@Fecha", fecha);
+            comando.Parameters.AddWithValue("@Fecha", Convert.ToDateTime(fecha));
 
             comando.ExecuteNonQuery();
             sqlDataReader = comando.ExecuteReader();

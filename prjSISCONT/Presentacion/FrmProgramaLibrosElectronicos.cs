@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Presentacion
 
         private Compras compras = new Compras();
         private Ventas ventas = new Ventas();
+        private Detraccion detraccion = new Detraccion();
 
         //bool edit = false;
         public FrmProgramaLibrosElectronicos()
@@ -29,10 +31,12 @@ namespace Presentacion
 
         private void frmRegistroCompra_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sdRegistroCompras.tblRegistroCompras' Puede moverla o quitarla según sea necesario.
-            this.tblRegistroComprasTableAdapter1.Fill(this.sdRegistroCompras.tblRegistroCompras);
-            //this.tblTipoComprobanteTableAdapter.Fill(this.sISCONTDataSet1.tblTipoComprobante);
-            this.tblRegistroComprasTableAdapter.Fill(this.sISCONTDataSet.tblRegistroCompras);
+            // TODO: esta línea de código carga datos en la tabla 'dSCompras.tblRegistroCompras' Puede moverla o quitarla según sea necesario.
+            this.tblRegistroComprasTableAdapter.Fill(this.dSCompras.tblRegistroCompras);
+            // TODO: esta línea de código carga datos en la tabla 'dSCompras.tblRegistroCompras' Puede moverla o quitarla según sea necesario.
+            updateDataGridViewCompras();
+
+            //this.TACompras.Fill(this.dSCompras.tblRegistroCompras);
             llenarComboTipoComprobante();
             //showCurrentMonth();
             dgvRegistroCompras.AutoGenerateColumns = false;
@@ -276,21 +280,13 @@ namespace Presentacion
 
         }
 
-        public static Boolean isDate(String fecha)
+        public static Boolean isDate(string fecha)
         {
-            try
-            {
-                if (fecha.Length == 10)
-                {
-                    DateTime.Parse(fecha);
-                    return true;
-                }
-                return false;
-            }
-            catch
-            {
-                return false;
-            }
+            DateTime date;
+
+            if (DateTime.TryParseExact(fecha, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out date))
+                return true;
+            else return false;
         }
 
         private void dgvRegistroCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -309,16 +305,23 @@ namespace Presentacion
                         fecha = dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasFechaEmision"].Value.ToString();
 
                         dataTableTipoCambio = tipoCambio.show(fecha);
-                        compra = dataTableTipoCambio.Rows[0]["Compra"].ToString();
-                        venta = dataTableTipoCambio.Rows[0]["Venta"].ToString();
+                        if (dataTableTipoCambio.Rows.Count > 0)
+                        {
+                            compra = dataTableTipoCambio.Rows[0]["Compra"].ToString();
+                            venta = dataTableTipoCambio.Rows[0]["Venta"].ToString();
+                        }
                     }
                     else
-                        MessageBox.Show("(" + dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasFechaEmision"].Value.ToString() + ") No es una fecha valida \nIngrese una fecha válida con los siguientes formatos: \ndd/mm/yyyy o yyyy-mm-dd");
+                        MessageBox.Show("(" + dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasFechaEmision"].Value.ToString() + ") No es una fecha valida \nIngrese una fecha válida con formato: \ndd/MM/yyyy");
 
                     if (venta == null)
                         MessageBox.Show("No se encontro un tipo de cambio para la fecha: " + fecha, "Tipo de Cambio .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasTipoCambio"].Value = venta;
+                    break;
+                case 4:
+                    if (!isDate(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasFechaPago"].Value.ToString()))
+                        MessageBox.Show("Ingrese una fecha valida con formato: dd/MM/yyyy");
                     break;
                 case 9:
                     string ruc;
@@ -389,6 +392,30 @@ namespace Presentacion
                         MessageBox.Show("No se encontro una cuenta con código: " + codigo, "Compras .::. Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         dgvRegistroCompras.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cuenta;
+                    break;
+                case 27:
+                    double comprasImporteTotal = 0;
+                    int comprasCodigo = 0;
+
+                    if (String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasImporteTotal"].Value.ToString() as String))
+                        MessageBox.Show("Ingrese un Importe Total");
+                    else
+                        comprasImporteTotal = Convert.ToDouble(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasImporteTotal"].Value.ToString());
+
+                    if (String.IsNullOrEmpty(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasCodigo"].Value.ToString() as String))
+                        MessageBox.Show("Ingrese un código");
+                    else
+                        comprasCodigo = Convert.ToInt32(dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasCodigo"].Value.ToString());
+
+                    DataTable dataTableDetraccion = new DataTable();
+                    dataTableDetraccion = detraccion.show(comprasCodigo);
+                    if (dataTableDetraccion.Rows.Count > 0)
+                    {
+                        double detraccionProcentaje = Convert.ToDouble(dataTableDetraccion.Rows[0]["porcentaje"].ToString());
+                        dgvRegistroCompras.Rows[e.RowIndex].Cells["comprasConstanciaReferencia"].Value = comprasImporteTotal * detraccionProcentaje;
+                    }
+                    else
+                        MessageBox.Show("Ingrese un número entero (1 - 5)");
                     break;
             }
 
@@ -472,22 +499,13 @@ namespace Presentacion
 
         private void updateDataGridViewCompras()
         {
-            this.tblRegistroComprasTableAdapter1.Fill(this.sdRegistroCompras.tblRegistroCompras);
-            //this.tblRegistroComprasTableAdapter.Fill(this.sISCONTDataSet.tblRegistroCompras);
+            this.tblRegistroComprasTableAdapter.Fill(this.dSCompras.tblRegistroCompras);
+            //this.TACompras.Fill(this.dSCompras.tblRegistroCompras);
             dgvRegistroCompras.Refresh();
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.tblRegistroComprasTableAdapter.FillBy(this.sISCONTDataSet.tblRegistroCompras);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
     }
 }

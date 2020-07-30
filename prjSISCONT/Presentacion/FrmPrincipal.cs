@@ -53,6 +53,11 @@ namespace Presentacion
             frmLogin.Show();
         }
 
-        
+        private void detracciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDetraccion frmDetraccion = new FrmDetraccion();
+            frmDetraccion.MdiParent = this;
+            frmDetraccion.Show();
+        }
     }
 }

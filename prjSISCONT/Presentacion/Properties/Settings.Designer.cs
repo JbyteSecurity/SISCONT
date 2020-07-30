@@ -33,5 +33,27 @@ namespace Presentacion.Properties {
                 return ((string)(this["SISCONTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=198.12.230.10;Initial Catalog=SISCONT;Persist Security Info=True;User" +
+            " ID=sa")]
+        public string SISCONTConnectionStringVPS {
+            get {
+                return ((string)(this["SISCONTConnectionStringVPS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=198.12.230.10;Initial Catalog=SISCONT;User ID=procont;Password=Lampar" +
+            "a1988")]
+        public string PROCONTConnectionStringVPS {
+            get {
+                return ((string)(this["PROCONTConnectionStringVPS"]));
+            }
+        }
     }
 }
