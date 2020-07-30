@@ -40,11 +40,12 @@ namespace Datos
         }
 
         public void insert(
-            int mes, string nReg, string fechaEmision, string fechaPago, string cTipo, string cSeire, string cnDocumento,
+            int mes, string nReg, string fechaEmision, string fechaPago, string cTipo, string cSerie, string cnDocumento,
             string pTipo, string pNumero, string pDocumento, string pRazonSocial, string cuenta, string descripcion, double baseImponible,
             double igv, double noGravada, double descuento, double importeTotal, double dolares, double tipoCambio, double percepcion, string destino,
             string descripcionDestino, string cuentaDestino, string pago, string codigo, string constanciaNumero, string constanciaFechapago,
-            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario
+            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario,
+            double conversionDolares
             )
         {
             comando.Connection = conexion.OpenConnection();
@@ -56,11 +57,12 @@ namespace Datos
             comando.Parameters.AddWithValue("@FechaEmision", fechaEmision);
             comando.Parameters.AddWithValue("@FechaPago", fechaPago);
             comando.Parameters.AddWithValue("@CTipo",cTipo );
-            comando.Parameters.AddWithValue("@CSerie", cSeire);
+            comando.Parameters.AddWithValue("@CSerie", cSerie);
             comando.Parameters.AddWithValue("@CNDocumento", cnDocumento);
             comando.Parameters.AddWithValue("@PTipo", pTipo);
             comando.Parameters.AddWithValue("@PNumero", pNumero);
             comando.Parameters.AddWithValue("@PDocumento", pDocumento);
+
             comando.Parameters.AddWithValue("@PNombreRazonSocial", pRazonSocial);
             comando.Parameters.AddWithValue("@Cuenta", cuenta);
             comando.Parameters.AddWithValue("@Descripcion", descripcion);
@@ -71,6 +73,7 @@ namespace Datos
             comando.Parameters.AddWithValue("@ImporteTotal", importeTotal);
             comando.Parameters.AddWithValue("@Dolares", dolares);
             comando.Parameters.AddWithValue("@TipoCambio", tipoCambio);
+
             comando.Parameters.AddWithValue("@Percepcion", percepcion);
             comando.Parameters.AddWithValue("@Destino", destino);
             comando.Parameters.AddWithValue("@DescripcionDestino", descripcionDestino);
@@ -81,10 +84,12 @@ namespace Datos
             comando.Parameters.AddWithValue("@ConstanciaFechaPago", constanciaFechapago);
             comando.Parameters.AddWithValue("@ConstanciaMonto", constanciaMonto);
             comando.Parameters.AddWithValue("@ConstanciaReferencia", constanciaReferencia);
+
             comando.Parameters.AddWithValue("@BancarizacionFecha", bancarizacionFecha);
             comando.Parameters.AddWithValue("@BancarizacionBco", bancarizacionBco);
             comando.Parameters.AddWithValue("@BancarizacionOperacion", bancarizacionOperacion);
             comando.Parameters.AddWithValue("@Usuario", usuario);
+            comando.Parameters.AddWithValue("@ConversionDolar", conversionDolares);
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -96,7 +101,8 @@ namespace Datos
             string pTipo, string pNumero, string pDocumento, string pRazonSocial, string cuenta, string descripcion, double baseImponible,
             double igv, double noGravada, double descuento, double importeTotal, double dolares, double tipoCambio, double percepcion, string destino,
             string descripcionDestino, string cuentaDestino, string pago, string codigo, string constanciaNumero, string constanciaFechapago,
-            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario
+            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario,
+            double conversionDolares
             )
         {
             comando.Connection = conexion.OpenConnection();
@@ -138,6 +144,7 @@ namespace Datos
             comando.Parameters.AddWithValue("@BancarizacionBco", bancarizacionBco);
             comando.Parameters.AddWithValue("@BancarizacionOperacion", bancarizacionOperacion);
             comando.Parameters.AddWithValue("@Usuario", usuario);
+            comando.Parameters.AddWithValue("@ConversionDolar", conversionDolares);
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();

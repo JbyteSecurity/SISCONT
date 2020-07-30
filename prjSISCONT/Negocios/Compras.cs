@@ -21,7 +21,7 @@ namespace Negocios
             string pTipo, string pNumero, string pDocumento, string pRazonSocial, string cuenta, string descripcion, double baseImponible,
             double igv, double noGravada, double descuento, double importeTotal, double dolares, double tipoCambio, double percepcion, string destino,
             string descripcionDestino, string cuentaDestino, string pago, string codigo, string constanciaNumero, string constanciaFechapago,
-            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario
+            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario, double comprasConversionDolares
             )
         {
             daoCompras.insert(
@@ -58,7 +58,8 @@ namespace Negocios
                 bancarizacionFecha,
                 bancarizacionBco,
                 bancarizacionOperacion,
-                usuario
+                usuario,
+                comprasConversionDolares
                 );
         }
 
@@ -67,7 +68,8 @@ namespace Negocios
             string pTipo, string pNumero, string pDocumento, string pRazonSocial, string cuenta, string descripcion, double baseImponible,
             double igv, double noGravada, double descuento, double importeTotal, double dolares, double tipoCambio, double percepcion, string destino,
             string descripcionDestino, string cuentaDestino, string pago, string codigo, string constanciaNumero, string constanciaFechapago,
-            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario
+            double constanciaMonto, string constanciaReferencia, string bancarizacionFecha, string bancarizacionBco, int bancarizacionOperacion, string usuario,
+            double comprasConversionDolares
             )
         {
             daoCompras.update(
@@ -105,7 +107,8 @@ namespace Negocios
                 bancarizacionFecha,
                 bancarizacionBco,
                 bancarizacionOperacion,
-                usuario
+                usuario,
+                comprasConversionDolares
                 );
         }
 
