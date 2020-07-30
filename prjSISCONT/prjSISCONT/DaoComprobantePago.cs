@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Datos
 {
@@ -12,10 +13,10 @@ namespace Datos
     {
         private Conexion conexion = new Conexion();
 
-        SqlCommand comando = new SqlCommand();
+        MySqlCommand comando = new MySqlCommand();
         public DataTable allCdpTypes()
         {
-            SqlDataReader leer;
+            MySqlDataReader leer;
             DataTable dataTableCDPType = new DataTable();
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_tipo_comprobante";

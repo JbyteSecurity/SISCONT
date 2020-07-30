@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {}
+    "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {
+    "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+        "projectUniqueName": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
         "projectName": "Negocios",
-        "projectPath": "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+        "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
         "packagesPath": "C:\\Users\\Developers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
+        "outputPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Developers\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
-                "projectPath": "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
+              "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
+                "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
               }
             }
           }
@@ -63,11 +63,11 @@
         }
       }
     },
-    "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
+    "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\Developers\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
+        "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
       },
       "frameworks": {
         "net46": {}
