@@ -73,14 +73,6 @@ C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Pre
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Developers\Documents\Visual Studio 2019\projects\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmDetraccion.resources
 =======
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
 C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.exe.config
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmLogin.resources
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmPrincipal.resources
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmProveedor.resources
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmProgramaLibrosElectronicos.resources
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmTipoCambio.resources
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
-C:\Users\Developers\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 >>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
+C:\Users\Jordan\source\repos\SISCONT\prjSISCONT\Presentacion\obj\Debug\Presentacion.FrmDetraccion.resources

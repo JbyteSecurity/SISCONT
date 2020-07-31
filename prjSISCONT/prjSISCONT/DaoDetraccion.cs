@@ -49,7 +49,7 @@ namespace Datos
 
         public bool insert(int codigo, double monto, double porcentaje)
         {
-            sqlCommand.Connection = conexion.OpenConnection();
+             sqlCommand.Connection = conexion.OpenConnection();
             sqlCommand.CommandText = "sp_insert_detracciones";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 

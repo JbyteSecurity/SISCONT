@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-//using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+
 
 namespace Datos
 {
     public class DaoCompras
     {
         private Conexion conexion = new Conexion();
-        MySqlCommand comando = new MySqlCommand();
+        SqlCommand comando = new SqlCommand();
 
         public DataTable all()
         {
-            MySqlDataReader sqlDataReader;
+            SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_registro_ventas";
@@ -29,7 +29,7 @@ namespace Datos
         
         public DataTable allCurrentMonth()
         {
-            MySqlDataReader sqlDataReader;
+            SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_current_month_compras";

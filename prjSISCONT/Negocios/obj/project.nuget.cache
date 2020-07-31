@@ -1,17 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "JJDvfhW5IJCTI7XJpP9LB1KdKy1hVNHDTYNXn5pPuKy4kb2/WH6ra/t8uus7nFZ2mtX0ABkD+TC3F+MtW6wbDw==",
+  "dgSpecHash": "Deo632lVVItM5diF3ESIGeaAE672Y+cUdNbTFj7K4r/oaYf+Gp7bKdKxU3tTiHDgK5lM9ILrX4lXk/qj8JJlTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
-=======
-  "dgSpecHash": "mNn45d9VoRBuZhwUpCbDqiVQTl/MXMiN5L5BS8rLcBl0J1R47+XpIhhfdIMwCLHsax0FmWD4xXTm4+YIwk4zew==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
->>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
+  "projectFilePath": "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Developers\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Developers\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Jordan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jordan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

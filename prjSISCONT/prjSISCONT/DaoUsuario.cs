@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-//using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+//using MySql.Data.MySqlClient;
 
 namespace Datos
 {
@@ -13,11 +13,11 @@ namespace Datos
     {
         private Conexion conexion = new Conexion();
 
-        MySqlCommand comando = new MySqlCommand();
+        SqlCommand comando = new SqlCommand();
 
         public DataTable login(string usuario, string contrasenia)
         {
-            MySqlDataReader sqlDataReaderProvider;
+            SqlDataReader sqlDataReaderProvider;
             DataTable dataTableProvider = new DataTable("tblUsuarios");
 
             comando.Connection = conexion.OpenConnection();

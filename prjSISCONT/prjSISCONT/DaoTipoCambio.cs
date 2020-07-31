@@ -4,24 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-<<<<<<< HEAD
 using System.Data.SqlClient;
 using System.Windows.Forms;
-=======
-//using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
->>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
+
 
 namespace Datos
 {
     public class DaoTipoCambio
     {
         Conexion conexion = new Conexion();
-        MySqlCommand comando = new MySqlCommand();
+        SqlCommand comando = new SqlCommand();
 
         public DataTable all()
         {
-            MySqlDataReader sqlDataReader;
+            SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "sp_all_tipo_cambio";
@@ -34,7 +31,7 @@ namespace Datos
 
         public DataTable show(string fecha)
         {
-            MySqlDataReader sqlDataReader;
+            SqlDataReader sqlDataReader;
             DataTable dataTable = new DataTable();
 
             comando.Connection = conexion.OpenConnection();

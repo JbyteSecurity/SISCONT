@@ -195,28 +195,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Developers\\.nuget\\packages\\": {}
+    "C:\\Users\\Jordan\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+      "projectUniqueName": "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
       "projectName": "Negocios",
-      "projectPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
-      "packagesPath": "C:\\Users\\Developers\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
-      "projectName": "Negocios",
-      "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
-      "packagesPath": "C:\\Users\\Developers\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
->>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
+      "projectPath": "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\Negocios.csproj",
+      "packagesPath": "C:\\Users\\Jordan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Developers\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Jordan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -228,13 +225,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
-              "projectPath": "C:\\Users\\Developers\\Documents\\Visual Studio 2019\\projects\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
-=======
-            "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
-              "projectPath": "C:\\Users\\Developers\\source\\repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
->>>>>>> bc9dabc0394e45708667573b96790b42771d96f1
+            "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj": {
+              "projectPath": "C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\prjSISCONT\\Datos.csproj"
             }
           }
         }
@@ -268,5 +260,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Jordan\\Source\\Repos\\SISCONT\\prjSISCONT\\Negocios\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

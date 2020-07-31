@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Data;
 
 namespace Datos
@@ -13,7 +12,7 @@ namespace Datos
     {
         private Conexion conexion = new Conexion();
         
-        MySqlCommand comando = new MySqlCommand();
+        SqlCommand comando = new SqlCommand();
 
         public void insert(
             int mes, string numeroRegistro, string fechaEmision, string fechaPago, string cdpTipo, string cdpSerie,
